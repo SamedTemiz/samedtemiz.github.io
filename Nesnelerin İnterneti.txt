@@ -1,0 +1,1498 @@
+Nesnelerin İnterneti
+1.	Hafta Ders Notları
+Nesnelerin İnterneti (IoT) kavramına giriş
+Dr. Öğretim Üyesi Osman ALTAY
+ 
+Nesnelerin İnterneti Giriş
+
+🠶  Nesnelerin  İnterneti  (IoT),  gömülü  zeka,  iletişim  araçları  ve  algılama  ve çalıştırma yeteneklerine sahip milyarlarca nesnenin IP (İnternet Protokolü) ağları üzerinden bağlanacağı bir dünya vizyonunu kapsar. Mevcut İnternetimiz,  donanım  odaklı  (bilgisayarlar,  fiberler  ve  Ethernet  kabloları) pazar odaklı (Facebook, Amazon) fırsatlara doğru temel bir geçiş geçirdi. Bu, güçlü yatay yazılım yetenekleriyle birbirine bağlı olarak ayrık intranetlerin birbirine bağlanması nedeniyle ortaya çıkmıştır. IoT, açık ortamlar ve birlikte çalışabilir platformlardan oluşan entegre bir mimari gerektirir.
+ 
+Nesnelerin İnterneti Giriş
+
+🠶 Akıllı nesneler ve siber-fiziksel sistemler yeni IoT varlıklarıdır: hedef donanımın sınırlı olduğu kısıtlı ortamlarda iletişim için uygun mikro denetleyiciler, optik ve/veya radyo alıcı-vericiler, sensörler, aktüatörler (eyleyici) ve protokol yığınlarıyla zenginleştirilmiş günlük yaşam nesneleri kaynaklar, çevreden veri toplamalarına ve buna göre hareket etmelerine izin verir ve onlara fiziksel dünya için bir arayüz sağlar. Bu nesneler kullanıcılar tarafından giyilebilir veya çevreye yerleştirilebilir. Genellikle son derece kısıtlıdırlar, sınırlı bellek ve kullanılabilir enerji depoları vardır ve katı düşük maliyetli gereksinimlere tabidirler. Veri depolama, işleme ve analitik, ham IoT verilerini zenginleştirmek ve bunları faydalı bilgilere dönüştürmek için gerekli olan temel gereksinimlerdir.
+ 
+Nesnelerin İnterneti Giriş
+
+🠶 "Edge Computing" paradigmasına göre, bilgi işlem kaynaklarının erişim ağlarının ucunda sunulması, IoT senaryoları için kilit öneme sahip çeşitli faydalar sağlayabilir: düşük gecikme süresi, gerçek zamanlı yetenekler ve bağlam farkındalığı. Uç düğümler (uçtaki sunucular veya mikro veri merkezleri), bağlı cihazlardan, nesnelerden ve uygulamalardan gelen veri akışları için bir arabirim görevi görebilir. Depolanan Büyük Veri daha sonra makine ve derin öğrenme gibi yeni mekanizmalarla işlenebilir ve bağlantılı nesneler tarafından oluşturulan ham verileri faydalı bilgilere dönüştürebilir. Yararlı bilgiler daha sonra ilgili cihazlara ve ilgili kullanıcılara dağıtılacak veya daha fazla işlem ve erişim için saklanacaktır.
+ 
+Kablosuz Geçici ve Sensör Ağları
+
+🠶 Kablosuz sensör ağları (WSN'ler), yirmi birinci yüzyılın ilk on yılında mikro elektronik ve iletişimin gelişmekte olan bir uygulama alanıydı. WSN'ler özellikle insanlar ve çevreleri arasındaki etkileşimlere geniş destek sözü verdi. WSN'nin potansiyeli kısaltmanın arkasındaki üç kelimede görülebilir:
+🠶 • “Kablosuz”, hareketlilik açısından kabloların ortadan kaldırılmasının sağladığı özgürlüğe odaklanıyor. destek ve sistem dağıtımı kolaylığı;
+🠶 • “Sensör”, algılama teknolojisinin, geniş anlamda dünyayı algılamak ve
+onunla etkileşim kurmak için araçlar sağlama yeteneğini yansıtır;
+🠶 • “Ağlar”, muhtemelen geniş alanlara dağılmış çok sayıda iletişim cihazı tarafından işlevsel yetenekleri verilen sistemler oluşturma olasılığına vurgu yapar.
+ 
+Kablosuz Geçici ve Sensör Ağları
+
+🠶 Erken askeri araştırmalarla desteklenen WSN'ler, iletişim paradigması açısından geleneksel ağlardan farklıydı: belirli cihazlar arasında uçtan uca aktarımlarda kullanılan ve her pakette hem kaynak hem de hedef adreslerin açık bir şekilde belirtildiği adres merkezli yaklaşım, alternatif (ve biraz yeni) bir veri merkezli yaklaşımla değiştirilecekti. Bu “adres körlüğü”, veri merkezli ağlar için uygun bir veri yayılım stratejisinin – başka bir deyişle iletişim protokolünün – seçilmesine yol açtı. Tipik ağ dağıtımı, izlenecek alanların etrafına yerleştirilmiş kaynaklardan ve kolay erişilebilir yerlere yerleştirilmiş lavabolardan oluşacaktır. Havuzlar, kaynaklardan gelen verileri tutmak için yeterli depolama kapasitesi sağladı.
+ 
+Kablosuz Geçici ve Sensör Ağları
+
+🠶 Kaynaklar, farklı zamanlama politikalarına uygun olarak havuzlara bilgi gönderebilir:
+🠶 periyodik (yani, zamana dayalı),
+🠶 olaya özel (yani, olaya dayalı),
+🠶 havuzlardan gelen taleplere yanıt olarak bir yanıt (örneğin, sorguya dayalı)
+🠶 veya bunların bir kombinasyonu.
+🠶 Araştırma bu alana odaklandığından, WSN'ler tipik olarak geçici ağlarla ilişkilendirilmiştir, öyle ki iki terim neredeyse – hatalı olsa da – eşanlamlı hale gelmiştir.
+ 
+Kablosuz Geçici ve Sensör Ağları
+
+🠶 Özel olarak, geçici ağlar genel, altyapısız, işbirliğine dayalı, fırsatçı ağlar olarak tanımlanır ve tipik olarak belirli senaryolar ve uygulamalar için özelleştirilmiştir. Bu tür ağlar, birçok faktörün (radyo kanalı, topoloji, veri trafiği vb.) sık ve rastgele varyasyonlarıyla yüzleşmek zorundadır, bu da çok sayıda parametrenin en verimli, etkili ve reaktif şekilde dinamik yönetimine ihtiyaç duyulduğunu gösterir.
+ 
+Kablosuz Geçici ve Sensör Ağları
+
+🠶 Bu amaçla, literatürde bir dizi anahtar araştırma problemi incelenmiş ve çözümler önerilmiştir:
+🠶 • altyapısız sistemlerde kendi kendine konfigürasyon ve kendi kendine
+organizasyon;
+🠶 • heterojen üyelere sahip sistemlerde işbirliği operasyonları için destek;
+🠶 • etkin yönlendirme protokolleri ile ağ düğümleri arasında çok atlamalı eşler
+arası iletişim;
+🠶 • yeterli derecede sağlamlık ve güvenilirlik sağlayan ağ kendi kendini iyileştirme davranışı;
+🠶 • kesintisiz mobilite yönetimi ve dinamik ağ topolojilerinin desteği.
+ 
+IoT özellikli Uygulamalar
+
+🠶 IoT hayatımızın her yönüne dokunuyor. IoT özellikli uygulamalar, ev ve bina otomasyonu, akıllı şehirler, akıllı şebekeler, Endüstri 4.0 ve akıllı tarım dahil olmak üzere çok sayıda senaryoda bulunur. Bu alanların her birinde, ortak (IP odaklı) bir iletişim protokolü yığınının kullanılması, yenilikçi uygulamaların oluşturulmasına olanak tanır. Bu derste, bu alanların her birinde potansiyel uygulamalara kısaca değineceğiz.
+ 
+IoT özellikli Uygulamalar
+
+🠶 Ev ve Bina Otomasyonu
+🠶 Akıllı Şehirler
+🠶 Akıllı Şebekeler
+🠶 Endüstriyel
+🠶 Akıllı Tarım
+ 
+IoT özellikli Uygulamalar
+
+🠶 Perakende, finans ve pazarlama
+🠶 Sağlık
+🠶 Taşımacılık ve lojistik
+🠶 Enerji
+🠶 Devlet ve askeri
+ 
+Ev ve Bina Otomasyonu
+
+🠶 Akıllı ev pazarı büyüyen yatırımları gördükçe ve olgunlaşmaya devam ettikçe, her biri belirli bir hedef kitle için tasarlanmış daha fazla ev otomasyon uygulaması ortaya çıktı. Sonuç, birbirinden kopuk birkaç dikey pazar segmentinin yaratılması olmuştur. Giderek yaygınlaşan uygulamaların tipik örnekleri, ev güvenliği ve enerji verimliliği ve enerji tasarrufu ile ilgilidir. Işık ve oda kontrolündeki yeniliklerle desteklenen IoT, ev otomasyonu için sonsuz uygulamaların geliştirilmesini teşvik edecek.
+ 
+Ev ve Bina Otomasyonu
+
+🠶 Örneğin, IoT bağlamında büyümesi hedeflenen bir ev otomasyonu alanının tipik bir örneği sağlık sektörüdür, yani fiziksel olarak daha az mobil olanlar için IoT özellikli çözümler (diğerlerinin yanı sıra, yaşlılar, özellikle sosyal medyanın geçmişiyle alakalıdır). yaşlanan nüfus) ve engelliler veya kronik hastalar için (örneğin, uzaktan sağlık izleme ve hava kalitesi izleme). Genel olarak, bina otomasyon çözümleri birleşmeye başlıyor ve aynı zamanda lüks, güvenlik ve konfordaki mevcut uygulamalardan daha geniş bir uygulama yelpazesine ve bağlantılı çözümlere doğru ilerliyor; bu pazar fırsatları yaratacaktır. Günümüzün akıllı ev çözümleri parçalanmış olsa da, IoT'nin ticari ev ve bina otomasyon çözümleri arasında yeni bir birlikte çalışabilirlik düzeyine yol açması bekleniyor.
+ 
+Akıllı Şehirler
+
+🠶 Şehirler, yaşam kalitesinin önemli olduğu karmaşık ekosistemlerdir. Bu tür kentsel ortamlarda insanlar, şirketler ve kamu yetkilileri sağlık, medya, enerji ve çevre, güvenlik ve kamu hizmetleri gibi alanlarda özel ihtiyaç ve talepler yaşarlar. Bir şehir, vatandaşlara doğru bilgi sağlamak için etkin bir şekilde izlenmesi gereken tek bir "organizma" gibi algılanıyor. IoT teknolojileri, şehir durumu hakkında veri toplamak ve bunları vatandaşlara yaymak için esastır. Bu bağlamda, şehirler ve kentsel alanlar, gelişmiş IoT tabanlı hizmetlere olan talebi şekillendirme konusunda kritik bir kitleyi temsil ediyor.
+ 
+Akıllı Şehirler
+
+🠶 Çevresel algılama yoluyla kirlilik kontrolü ve düzenleyici analiz
+🠶 Şehir çapında sensör ağlarını kullanarak mikro iklim hava tahminleri
+🠶 Talep üzerine atık yönetimi hizmeti sayesinde verimlilik kazanımları ve
+iyileştirilmiş maliyetler
+🠶 Akıllı trafik ışığı kontrolü ve desenleme yoluyla iyileştirilmiş trafik akışı ve yakıt ekonomisi
+🠶 Talep üzerine şehir aydınlatmasının enerji verimliliği
+ 
+Akıllı Şehirler
+
+🠶 Gerçek zamanlı yol talebine, hava koşullarına ve yakındaki pulluklara dayalı akıllı kar küreme
+🠶 Hava durumuna ve mevcut kullanıma bağlı olarak parkların ve kamusal
+alanların akıllı sulanması
+🠶 Suç ve gerçek zamanlı otomatik AMBER Uyarılarını izlemek için akıllı kameralar
+🠶 Talep üzerine en iyi park yerini otomatik olarak bulmak için akıllı park yerleri
+🠶 Uzun ömürlülüğü ve hizmeti iyileştirmek için köprü, sokak ve altyapı aşınma ve kullanım monitörleri
+ 
+Akıllı Şebekeler
+
+🠶 Akıllı şebeke, akıllı sayaçlar, akıllı cihazlar, yenilenebilir enerji kaynakları ve enerji verimli kaynaklar dahil olmak üzere çeşitli operasyonel sistemleri içeren bir elektrik şebekesidir. Güç hattı iletişimi (power line communication (PLC)), verileri taşımak için mevcut elektrik kablolarının kullanımı ile ilgilidir ve uzun süredir araştırılmaktadır. Elektrik şirketleri, mevcut elektrik şebekesi üzerinde (sınırlı miktarda) veri göndermek veya almak için bu teknolojiyi yıllardır kullanıyor.
+ 
+Akıllı Şebekeler
+
+🠶 Güç hattı iletişimi çoğunlukla yayılma ortamının türü ile sınırlı olmasına rağmen, dağıtım ağındaki mevcut kablolamayı kullanabilir. AB standartlarına ve yasalarına göre, elektrik hizmeti şirketleri 3-148 kHz frekans bandında düşük bit hızlı veri aktarımları (50 Kbps'den düşük veri hızlarıyla) için Güç hattı iletişimi kullanabilir. Bu teknoloji, akıllı ölçüm hizmetleri ve enerji tüketimi raporlaması gibi birçok uygulama alanında insanlar ve nesneler arasında yeni fırsatlar ve yeni etkileşim biçimleri açar. Bu, Güç hattı iletişimi akıllı şehir ve akıllı şebeke senaryoları gibi nispeten geniş alanlara yayılmış büyük sistemlerde algılama, kontrol ve otomasyon için bir etkinleştirici yapar. Güç hattı iletişiminin yanı sıra, IoT gibi akıllı otomasyon süreçlerini iyileştirebilen etkinleştirme teknolojileri de benimsenebilir.
+ 
+Akıllı Şebekeler
+
+🠶 Örneğin endüstriyel senaryolarda (örneğin otomasyon ve üretim şirketlerinde uzaktan kontrol) Güç hattı iletişimi teknolojisinin benimsenmesi, “Endüstriyel IoT”nin yolunu açmaktadır. Güç hattı iletişimi teknolojisinin ağ değişikliklerinden (onarımlar ve iyileştirmeler, fiziksel kaldırma ve aktarım işlevi açısından) kurtulma yeteneği sayesinde, sinyal iletimindeki serpintiyi azaltan çeşitli uygulamalar etkinleştirilmiştir. Bununla birlikte, enerji hatlarının veri iletimi için ideal kanallardan uzak olduğu iyi bilinmektedir (konum, zaman, frekans bandı ve hatta bağlı ekipmanın türündeki içsel farklılıklar nedeniyle).
+ 
+Akıllı Şebekeler
+
+🠶 Sonuç olarak, iletişimin sağlamlığını geliştirmek için IoT ve Güç hattı iletişimi paradigmalarının ortak benimsenmesine artan bir ilgi vardır. Bu, yaygın bilgi işlem  yeteneklerine  ve  (IETF,  ETSI  ve  W3C  gibi  İnternet  standardizasyon kuruluşları tarafından önerildiği gibi) internet standardı çözümlerine sahip küçük, kaynakları kısıtlı cihazların (yani IoT) kullanılması önerisine yol açmıştır. Bu tür sistemler, geleceğin akıllı şebekelerini uygulamak için kilit bileşenler olabilir.
+ 
+Endüstriyel IoT
+
+🠶  Endüstriyel  Nesnelerin  İnterneti  (IIoT),  IoT'yi  imalat,  lojistik,  petrol  ve  gaz, ulaşım, enerji/kamu hizmetleri, madencilik ve metaller, havacılık ve diğerleri gibi sektörlerde kullanıldığı şekliyle tanımlar. Bu endüstriler, G20 ülkeleri arasında gayri safi yurtiçi hasılanın çoğunluğunu temsil ediyor. IIoT, İnternet'in 1990'ların sonlarında olduğu yere benzer şekilde, hala erken bir aşamadadır. Tüketici İnternetinin son yirmi yılda geçirdiği evrim bazı önemli dersler verse de, benzersiz kapsamı ve gereksinimleri göz önüne alındığında, bu öğrenmenin ne kadarının IIoT için geçerli olduğu belirsizdir.
+ 
+Endüstriyel IoT
+
+🠶  Örneğin, gerçek zamanlı yanıtlar, günümüzün İnterneti için gerçek zamanlı olup, genellikle birkaç saniye anlamına gelirken, endüstriyel makineler için gerçek zamanlı, milisaniyenin altında ölçekler içerir. Bir diğer önemli husus ise güvenilirliktir. Mevcut İnternet, e-ticaret veya insan etkileşimleri için kabul edilebilir performans sağlayan bir “en iyi çaba” yaklaşımını içermektedir. Ancak, elektrik şebekesinin, hava trafik kontrol sisteminin veya otomatik bir fabrikanın aynı süre boyunca arızalanması çok daha ciddi sonuçlara yol açacaktır.
+ 
+Endüstriyel IoT
+
+🠶   Almanya'da Cisco, GE ve Huawei gibi büyük şirketlerin çabalarına ve Industrie
+4.0 gibi hükümet girişimlerine çok dikkat edildi. Örneğin:
+🠶   • GE, müşterilerin IIoT yetenekleri ve hizmetleri aracılığıyla varlık performansını ve iş operasyonlarını iyileştirmelerine yardımcı olarak 2014 yılında 1 milyar dolardan fazla gelir artışı gerçekleştirdiğini duyurdu.
+🠶 • Alman hükümeti, dijital teknolojileri Alman sanayi sektörüne uygulamak için kapsamlı bir vizyon ve eylem planı oluşturmak üzere kamu ve özel sektör liderlerini ve akademiyi bir araya getiren çok yıllı stratejik bir girişim olan “Industrie 4.0”a sponsorluk yapıyor.
+🠶   • Diğer Avrupa ülkeleri, Akıllı Fabrika (Hollanda), Endüstri 4.0 (İtalya), Geleceğin Endüstrisi (Fransa) ve diğerleri gibi IIoT'nin merkezde yer aldığı kendi endüstriyel dönüşüm projelerine sahiptir.
+🠶 • Çin ayrıca yakın zamanda dijital teknolojilerin ve sanayileşmenin yerel entegrasyonunu teşvik etmek için “Made in China 2025” stratejisini başlattı.
+ 
+Endüstriyel IoT
+
+🠶 IIoT ivme kazanırken, karşılaşılan en büyük darboğazlardan biri, farklı “diller” konuşan akıllı cihazlar arasında bilgi paylaşımının yapılamamasıdır. Bu iletişim boşluğu, fabrika zeminlerinde kullanılan çoklu protokollerden kaynaklanmaktadır. Bu nedenle, veri toplamak için makineye bir sensör yerleştirebilseniz de, bu bilgiyi bir ağ üzerinden iletmek ve nihayetinde diğer sistemlerle “konuşmak” biraz daha zordur. Bu nedenle standardizasyon, IIoT'nin önemli bir yönüdür.
+ 
+Endüstriyel IoT
+
+🠶 IIoT'nin potansiyel getirisi muazzamdır. Operasyonel verimlilik, en önemli cazibe merkezlerinden biridir ve ilk benimseyenler bu faydalara odaklanmıştır. Örneğin, üreticiler otomasyon ve daha esnek üretim tekniklerini tanıtarak üretkenliklerini %30'a kadar artırabilirler. Bu bağlamda, üç IIoT becerisine hakim olunmalıdır:
+🠶 • sensör güdümlü bilgi işlem: algılanan verileri (aşağıda açıklanan endüstriyel analitiği kullanarak) operatörlerin ve sistemlerin harekete geçebileceği içgörülere dönüştürmek;
+🠶 • endüstriyel analitik: sensörlerden ve diğer kaynaklardan gelen verileri eyleme geçirilebilir içgörülere dönüştürmek;
+🠶 • akıllı makine uygulamaları: algılama cihazlarının ve akıllı bileşenlerin
+makinelere entegre edilmesi.
+ 
+Akıllı Tarım
+
+🠶 Modern tarım, dünyanın farklı bölgelerinde sürdürülebilir bir gelecek inşa etmeye çalışırken muazzam zorluklarla karşı karşıya. Bu tür zorluklara örnek olarak nüfus artışı, kentleşme, giderek bozulan bir çevre, hayvansal protein tüketimine yönelik artan bir eğilim, yaşlanan nüfus ve göçün bir sonucu olarak gıda tercihlerindeki değişiklikler ve elbette iklim değişikliği sayılabilir. Bilimsel ilerlemelerden ve araştırma ve geliştirme faaliyetlerinden elde edilen üretim süreçlerinin, teknolojilerin ve araçların benimsenmesi ile karakterize edilen modern tarımın geliştirilmesi gerekmektedir. Hassas tarım veya akıllı tarım, dijital gelişim için en büyük fırsatlara sahip ancak bugüne kadar dijitalleştirilmiş çözümlerin en düşük kapsama sahip bir alandır.
+ 
+Akıllı Tarım
+
+🠶 Tarım endüstrisi, önümüzdeki birkaç on yılda tartışmasız her zamankinden daha önemli hale gelecek. Çevresel ve karasal sensörlerin kullanımından, hava durumunu izlemek için uygulamalardan, gübre ve pestisitlerin daha hassas uygulanması için otomasyondan (böylece doğal kaynakların israfını azaltır) ve bakım için planlama stratejilerinin benimsenmesinden büyük faydalar sağlayabilir. Akıllı tarım, drone'lar ve sensör ağları (veri toplamak için) ve bulut platformları (toplanan verileri yönetmek için) gibi yeni teknolojilerin uygulanması sayesinde zaten yaygınlaşıyor.
+ 
+Akıllı Tarım
+
+🠶 Akıllı tarımda kullanılan teknolojiler, çiftçiler, yetiştiriciler ve sektördeki diğer paydaşlar tarafından yürütülen faaliyetler kadar karmaşıktır. Geniş bir olası uygulama yelpazesi vardır: filo yönetimi, hayvancılık izleme, balık yetiştiriciliği, orman bakımı, kapalı şehir çiftçiliği ve daha fazlası. İlgili tüm teknolojiler, IoT kavramı etrafında döner ve karar destek sistemleri aracılığıyla çiftçileri karar süreçlerinde desteklemeyi amaçlar. Daha önce mümkün olmayan bir ayrıntı düzeyinde gerçek zamanlı verileri içerirler. Bu verimlilik  artışı.  İletişim  teknolojileri,  akıllı  tarım  uygulamalarının  önemli  bir bileşenidir. Özellikle kablosuz iletişim teknolojileri, ilgili kablolamadaki önemli azalma ve basitleştirme nedeniyle çekicidir.
+ 
+Akıllı Tarım
+
+🠶 Çeşitli kablosuz standartlar oluşturulmuştur. Bunlar, iletim aralığına bağlı olarak iki ana kategoride gruplandırılabilir:
+🠶 • Kısa menzilli iletişim: aşağıdakiler için standartlar dahil: – Wi-Fi için kullanılan kablosuz LAN, yani IEEE 802.11 – daha yaygın olarak IEEE gibi ölçüm ve otomasyon uygulamaları için kullanılan kablosuz PAN 802.15.1 (Bluetooth) (IEEE, 2002) ve IEEE 802.15.4 (ZigBee/6LoWPAN) (IEEE, 2003). Tüm bu
+standartlar,   tipik   olarak   2.400–2.4835   GHz   bandında   çalışan
+enstrümantasyon, bilimsel ve tıbbi (ISM) radyo bantlarını kullanır.
+🠶 • Uzun menzilli iletişim: 868-870 MHz bandında LoRA gibi giderek daha önemli alt gigahertz IoT iletişim teknolojileri dahil. Bu ticaret veri iletim hızları (yüzlerce   kbit/s   düzeyinde)   daha   uzun   iletim   aralıkları   için.   İletişim teknolojileri ayrıca özel uygulamaya göre sınıflandırılabilir:
+ 
+Akıllı Tarım
+
+🠶 • çevresel izleme (hava durumu izleme ve coğrafi referanslı çevresel izleme)
+🠶 • hassas tarım
+🠶 • makine ve süreç kontrolü (M2M iletişim)
+🠶 • tesis otomasyonu
+🠶 • izlenebilirlik sistemleri.
+ 
+Perakende, finans ve pazarlama
+
+🠶 Bilinen veya potansiyel müşterileri yakınlığa göre bulmak ve satış bilgileri sağlamak gibi hedefli reklamcılık.
+🠶 Pazarlama analitiği olarak yakınlık algılayan müşteriler, trafik kalıpları ve
+varışlar arası süreler gibi işaret verme.
+🠶 Envanter kontrolü, kayıp kontrolü ve tedarik zinciri optimizasyonları gibi varlık takibi.
+🠶 Bozulabilir envanterin soğuk depolanmasını analiz etmek gibi soğuk depo
+izleme.
+ 
+Perakende, finans ve pazarlama
+
+🠶 Gıda tedarikine tahmine dayalı analitik uygulayın.
+🠶 Varlıkların sigorta takibi.
+🠶 Sürücülerin sigorta risk ölçümü.
+🠶 Perakende, konaklama veya şehir genelinde dijital tabela.
+🠶 Eğlence mekanları, konferanslar, konserler, eğlence parkları ve müzelerdeki işaret sistemleri.
+ 
+Sağlık
+
+🠶 Sağlık hizmeti
+🠶 Evde hasta bakımı
+🠶 Öngörücü ve önleyici sağlık hizmetlerinin öğrenme modelleri
+🠶 Yaşlı bakımı ve takibi
+🠶 Hastane ekipmanları ve malzeme varlık takibi
+🠶  İlaç takibi ve güvenliği
+🠶 Uzak alan tıbbı
+🠶  İlaç araştırması
+🠶 Hasta düşme göstergeleri
+ 
+Taşımacılık ve lojistik
+
+🠶 Filo takibi ve konum farkındalığı
+🠶 Vagon tanımlama ve izleme
+🠶 Filolar içinde varlık ve paket takibi
+🠶 Yoldaki araçların önleyici bakımı
+ 
+Enerji
+
+🠶 Verimlilik kazanımları için binlerce sensör ve veri noktasının petrol sondaj kulesi analizi
+🠶 Uzaktan güneş paneli izleme ve bakım
+🠶 Nükleer tesislerin tehlikeli analizi
+🠶 Enerji kullanımını ve talebini izlemek için şehir çapında bir dağıtımda akıllı elektrik sayaçları
+🠶 Uzak rüzgar türbinlerinde havanın bir fonksiyonu olarak gerçek zamanlı
+kanat ayarları
+ 
+Devlet ve askeri
+
+🠶 IoT cihaz model analizi ve işaretçiler aracılığıyla terör tehdidi analizi
+🠶 Drone'lar aracılığıyla sürü sensörleri
+🠶 Tehditleri izlemek için sensör ağları oluşturmak için savaş alanına yerleştirilen
+sensör bombaları
+🠶 Devlet varlık takip sistemleri
+🠶 Gerçek zamanlı askeri kişisel takip ve konum hizmetleri
+🠶 Düşman ortamları izlemek için sentetik sensörler
+🠶 Baraj ve taşkın çevresini ölçmek için su seviyesi izleme
+ 
+IOTI tarihi
+
+	Cihaz
+1973	Mario W. Cardullo, ilk RFID etiketinin patentini aldı
+1982	Carnegie Mellon internet bağlantılı soda makinesi
+1989	Interop '89'da internete bağlı ekmek kızartma makinesi
+1991	HP, HP LaserJet IIISi'yi sunar: ilk Ethernet bağlantılı ağ yazıcısı
+1993	Cambridge Üniversitesi'nde internete bağlı cezve (ilk internet bağlantılı kamera)
+1996	General Motors OnStar (2001 uzaktan teşhis)
+1998	Bluetooth SIG oluşturuldu
+1999	LG İnternet Dijital DIOS buzdolabı
+
+2000	Cooltown'ın her yerde yaygın bilgi işlem konseptinin ilk örnekleri: Bir araya geldiğinde insanlar,
+yerler ve nesneler için web bağlantılı bir deneyim yaratan bir bilgi işlem ve iletişim teknolojileri
+sistemi olan HP Labs.
+2001	Piyasaya sürülen ilk Bluetooth ürünü: KDDI Bluetooth özellikli cep telefonu
+2005	Birleşmiş Milletler Uluslararası Telekomünikasyon Birliği, IoT'nin ilk kez yükselişini öngören raporu
+2008	IPSO Alliance, nesneler üzerinde IP'yi desteklemek için kuruldu, ilk IoT odaklı ittifak
+2010	Katı hal LED ampullerin geliştirilmesindeki başarının ardından oluşturulan Akıllı Aydınlatma
+konsepti
+2014	Apple, işaretçiler için iBeacon protokolü oluşturur
+ 
+
+ 
+
+ 
+Iot’nin Faydaları
+
+🠶 IoT veya herhangi bir teknoloji şu şekilde gelir:
+🠶 Yeni gelir kaynakları (yeşil enerji çözümleri)
+🠶 Maliyetlerin düşürülmesi (evde hasta bakımı)
+🠶 Pazara sunma süresinin azaltılması (fabrika otomasyonu)
+🠶 Tedarik zinciri lojistiğini iyileştirme (varlık takibi)
+🠶 Üretim kaybının azaltılması (hırsızlık, bozulabilir ürünlerin bozulması)
+🠶 Artan üretkenlik (makine öğrenimi ve veri analitiği)
+🠶 Yeni ürün (Geleneksel termostatların yerini alan yuva)
+ 
+
+
+
+
+
+
+
+
+
+
+Nesnelerin İnterneti
+2.	Hafta Ders Notları
+Nesnelerin İnterneti (IoT) Mimarisi ve İletişim Prokolleri
+Dr. Öğretim Üyesi Osman ALTAY
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 Nesnelerin interneti, dünyanın en uzak köşelerinde bulunan en basit sensörlerle başlar ve analog fiziksel etkileri dijital sinyallere (internetin dili) dönüştürür. Veriler daha sonra kablolu ve kablosuz sinyaller, çeşitli protokoller, doğal parazitler ve elektromanyetik çarpışmalar yoluyla karmaşık bir yolculuğa çıkar. Paketlenmiş veriler oradan bir buluta veya büyük veri merkezine ulaşan çeşitli kanallardan geçecektir. Nesnelerinin internetinin gücü, tek bir sensörden gelen tek bir sinyal değil, yüzlerce, binlerce, potansiyel olarak milyonlarca sensör, olay ve cihazın toplamıdır.
+ 
+Nesnelerin internetine karşı makineden makineye (M2M)
+
+🠶 Nesnelerin interneti dünyasındaki yaygın bir kafa karışıklığı alanı, onu makineden makineye (M2M) tanımlayan teknolojilerden ayıran şeydir. Nesnelerin interneti daha önce, M2M olarak kullanılmaktaydı. M2M ve nesnelerin interneti çok benzer teknolojilerdir, ancak önemli bir fark vardır:
+ 
+Nesnelerin internetine karşı makineden makineye (M2M)
+
+🠶 M2M: Otonom bir cihazın doğrudan başka bir otonom cihazla iletişim kurmasını içeren genel bir kavramdır. Otonom, düğümün insan müdahalesi olmadan başka bir düğümle bilgi başlatma ve iletişim kurma yeteneğini ifade eder. İletişim şekli uygulamaya açık bırakılmıştır. Bir M2M cihazının iletişim için doğal servisler veya topolojiler kullanmaması çok iyi olabilir. Bu, bulut hizmetleri ve depolama için düzenli olarak kullanılan tipik internet cihazlarını dışarıda bırakır. Bir M2M sistemi, seri bağlantı noktası veya özel protokol gibi IP tabanlı olmayan kanallar üzerinden de iletişim kurabilir.
+ 
+Nesnelerin internetine karşı makineden makineye (M2M)
+
+🠶 Nesnelerin interneti: nesnelerin interneti sistemleri, bazı M2M düğümlerini (IP olmayan iletişim kullanan bir Bluetooth ağı gibi) içerebilir, ancak verileri bir uç yönlendirici veya ağ geçidinde toplar. Ağ geçidi veya yönlendirici gibi bir uç cihaz, internete giriş noktası görevi görür. Alternatif olarak, daha önemli bilgi işlem gücüne sahip bazı sensörler, internet ağ katmanlarını sensörün  kendisine  doğru  itebilir.  İnternet  rampasının  nerede  olduğuna bakılmaksızın, internet dokusuna bağlanma yöntemine sahip olması, nesnelerin internetini tanımlayan şeydir.
+ 
+Nesnelerin internetine karşı makineden makineye (M2M)
+
+🠶 Sensörler, uç işlemciler ve akıllı cihazlar için verileri internete taşıyarak, eski bulut hizmetleri dünyası en basit cihazlara uygulanabilir. Bulut teknolojisi ve mobil iletişim ana akım ve uygun maliyetli hale gelmeden önce, sahadaki basit sensörler ve gömülü bilgi işlem cihazları, verileri küresel olarak saniyeler içinde iletmek, kalıcılık için bilgi depolamak ve trendleri ve kalıpları bulmak için verileri analiz etmek için iyi araçlara sahip değildi. Bulut teknolojileri ilerledikçe, kablosuz iletişim sistemleri yaygınlaştı, lityum iyon gibi yeni enerji cihazları uygun maliyetli hale geldi ve makine öğrenimi modelleri eyleme geçirilebilir değer üretmek için gelişti. Bu, nesnelerin interneti değer teklifini büyük ölçüde geliştirdi. Bu teknolojiler bir araya geldiklerinde bir araya gelmeseydi, hala bir M2M dünyasında olurduk.
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 Sensör iletişim sistemleri: Kablosuz kişisel alan ağları 0 cm'den 100 m'ye kadar ulaşır. Düşük hızlı ve düşük güçlü iletişim kanalları, genellikle IP tabanlı olmayan sensör iletişiminde bir yere sahiptir.
+🠶 Yerel alan ağları: Genellikle eşler arası veya yıldız topolojilerinde hızlı radyo iletişimi için kullanılan 802.11 Wi-Fi gibi IP tabanlı iletişim sistemleri.
+🠶  Toplayıcılar, yönlendiriciler, ağ geçitleri: Gömülü sistem sağlayıcıları, en ucuz satıcılar (işlemciler, DRAM ve depolama), modül satıcıları, pasif bileşen üreticileri, ince istemci üreticileri, hücresel ve kablosuz radyo üreticileri, ara katman sağlayıcıları, sis çerçeve sağlayıcıları, uç analiz paketleri, uç güvenlik sağlayıcıları, sertifika yönetim sistemleri.
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 WAN: Hücresel ağ sağlayıcıları, uydu ağı sağlayıcıları, Düşük Güçlü Geniş Alan Ağı (LPWAN) sağlayıcıları. Genellikle nesnelerin interneti MQTT, CoAP ve hatta HTTP gibi kısıtlı cihazlar için hedeflenen internet aktarım protokollerini kullanır.
+🠶 Bulut: Hizmet sağlayıcı olarak altyapı, hizmet sağlayıcı olarak platform, veritabanı üreticileri, akış ve toplu işleme üreticileri, veri analitiği paketleri, hizmet sağlayıcı olarak yazılım, veri gölü sağlayıcıları, Yazılım Tanımlı Ağ Oluşturma/Yazılım Tanımlı Çevre sağlayıcıları ve makine öğrenme hizmetleri.
+🠶 Veri analitiği: Bilgiler toplu halde buluta yayılırken. Hacimli veriler ile uğraşmak ve değer çıkarmak, karmaşık olay işleme, veri analitiği ve makine öğrenimi tekniklerinin işidir.
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 Güvenlik: Tüm mimariyi birbirine bağlamak güvenliktir. Güvenlik, fiziksel sensörlerden CPU'ya ve dijital donanıma, radyo iletişim sistemlerine, iletişim protokollerinin kendisine kadar her bileşene dokunacaktır. Her seviyenin güvenlik, özgünlük ve bütünlük sağlaması gerekir. IoT dünyadaki en büyük saldırı yüzeyini oluşturacağından bir zincirde zayıf halka olamaz.
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 Nesnelerin interneti, verileri en uzak ve en karmaşık ortamdan Google, Amazon, Microsoft ve IBM'deki en büyük veri merkezlerine taşımak için önemli teknolojiler olmadan var olamazdı. Nesnelerin interneti internet kelimesini içerir ve bu nedenle ağ oluşturma, iletişim ve hatta sinyal teorisi hakkında bilgi sahibi olmamız gerekmektedir. Nesnelerin internetinin başlangıç noktası sensörler veya uygulama değildir. Başarılı bir mimari, bir sensörden bir WAN'a ve tekrar tekrar ağlar arası iletişim ile anlaşacaktır. Bu iletişim ve ağ oluşturma bölümü, iletişim ve bilginin teori ve matematiksel temelleri ile başlar.
+ 
+Nesnelerin İnterneti Mimarisi
+
+🠶 Başarılı bir mimari, yalnızca belirli protokollerin neden kısıtlandığını anlamak için değil, aynı zamanda nesnelerin interneti seviyelerinde başarılı bir şekilde ölçeklenen gelecekteki sistemleri tasarlamak için ön araçlara ve modellere ihtiyaç duymaktadır. Bu araçlar, menzil ve güç analizi, sinyal-gürültü oranı, yol kaybı ve parazit gibi kablosuz radyo dinamiklerini içerir.
+ 
+İletişim Protokolleri
+
+🠶 Nesnelerin interneti fiziksel çevreyi algılamak ve algılanan bilgileri iletmek için birbirine bağlı büyük bir cihaz ekosistemidir. Nesnelerin interneti cihazları 4 ana unsurdan oluşmaktadır.
+🠶 Cihazın beyni ana kontrol ünitesi (MCU: Master Controller Unit)
+🠶 Ortamdan bilgi toplayan sensörler,
+🠶  İletişim modülleri
+🠶 Güç kaynakları
+ 
+İletişim Protokolleri
+
+🠶 Nesnelerin interneti cihazları, iletişim modülleri ile güvenli bir şekilde iletişim ağına bağlı çevrimiçi çalışabilen ve veri aktarabilen cihazlardır. Bu iletişim için ortak bir dil olması gerekmektedir. Bu nesnelerin interneti iletişim protokolleri ile mümkün olmaktadır.
+🠶 Nesnelerin internetinde kullanılacak teknoloji yelpazesi oldukça geniştir. Aynı durum iletişim protokollerinde de bulunmaktadır. Seçim yapılırken yetenekleri, veri hızları, iletişim menzilleri, güç tüketimi ve bellek gereksinimi gibi özelliklerine dikkat edilmelidir. Her protokolün belirli yönlerden avantajları bulunurken dezavantajları da bulunmaktadır.
+ 
+İletişim Protokolleri
+
+🠶  İletişim  kuralları  iki  veya  daha  fazla  cihazın  aralarında  güvenli  bir iletişim kurmasını sağlayan bir dizi kuraldır. İletişim kablolu ya da kablosuz olarak yapılabilir. Ancak büyük bir sistem kurulacağı zaman kablosuz sistemler daha tercih edilebilirdir. Çünkü coğrafi olarak dağınık çok sayıda cihazı kablo ile bağlamak neredeyse imkansızdır. Bu yüzden kablosuz bağlantı maliyet, kurulum kolaylığı ve altyapı sınırları gibi nedenlerden dolayı kablolu bağlantılara göre daha çok tercih edilmektedir.
+ 
+İletişim Protokolleri
+
+🠶 Nesnelerin internetinde bir uç cihazdan internete veri göndermek ve almak için birden fazla protokolün beraber çalışması gerekmektedir. Bu yüzden iletişim sistemlerinde katmanlı mimariler tercih edilmektedir. İşlevlerine göre gruplandırılıp TCP/IP (transmission control protocol/internet protocol) ile ilişkilendirilebilir. TCP/IP
+🠶 Fiziksel katman (physical layer)
+🠶 Ortam erişim kontrol katmanı (MAC layer)
+🠶 Ağ katmanı (network layer)
+🠶 Taşıma katmanı (transport layer)
+🠶 Uygulama katmanı (application layer) olmak üzere 5 katmana sahiptir.
+ 
+Application layer	Transport Layer	Network Layer	Media Access Control- MAC layer	Physical Layer
+OneM2M	TCP	IPv6	IEEE 802.15.4
+(ZigBee, WirelessHART, Thread, ISA100.11a)	IEEE 802.15.4
+(ZigBee, WirelessHART, Thread,
+ISA100.11a)
+HTTPs	UDP	IPv4	Bluetooth	Bluetooth
+CoAP	DTLS	RPL	RFID/NFC	RFID/NFC
+MQTT		LoWPAN	Z-Wave	Z-Wave
+AMQP			LoRaWAN	LoRaWAN
+XMPP			Sigfox	Sigfox
+DDS			2G, 3G,4G, 5G, LTE, NB-IOT, LTE-	2G, 3G,4G, 5G, LTE,
+NB-IOT, LTE-
+NTP			IEEE 802.11 WiFi	IEEE	802.11
+WiFi
+EFF			IEEE 802.3 Ethernet	IEEE	802.3
+Ethernet
+
+ 
+İletişim Protokolleri
+
+🠶	Fiziksel Katman (physical layer)
+🠶	Nesnelerin interneti protokol katmanın en alt katmanı, temel sinyal iletim teknikleriyle ilgilenen fiziksel katman protokollerini içermektedir.
+🠶	Ortam Erişim Kontrol Katmanı
+🠶 MAC katmanı fiziksel katman bağlantısı üzerinden iletilen veri çerçevesinin (frame) yapısı ile ilgilenmektedir. 4 temel alandan oluşmaktadır. Preamble, Header, Payload ve FCS.
+🠶 Preamble: Kaynak ve hedef arasında senkronizasyon için kullanılmaktadır.
+🠶 Header: Kaynak ve hedef adresleri ile diğer kontrol bilgilerini içermektedir.
+🠶 Payload: İletilen veri yükünü içermektedir.
+🠶 FCS (frame check sequence): Verilerin bütünlüğünü kontrol etmek için hata kontrol bitlerini içermektedir.
+ 
+İletişim Protokolleri
+
+🠶 Ağ Katmanı
+🠶 Ağ katmanında yer alan IP protokolü esas olarak, geniş alan ağlarında paketleri yönlendirmekten sorumludur. Ayrıca IP protokolü, TCP protokolü ile çalışırken ek QoS (Quality of Service) prosedürlerini ve tıkanıklık kontrol özelliklerini destekler. IP protokolünün bir diğer özelliği datagramların parçalanması ve birleştirilmesidir. Bu özellik TCP/IP protokolünü alt katman protokolünden bağımsız kılmaktadır. Çünkü IP katmanı, IP datagram boyutunu maksimum iletim biriminin (Maximum Transfer Unit-MTU) boyutuna veya fiziksel ağ birimi katmanı izin verdiği paket boyutuna veya fiziksel ağ arayüzünden izole ederek üst katmanların protokol kümesi tasarımdan bağımsız olarak alt katman protokollerinin çalışmasına izin verir.
+ 
+İletişim Protokolleri
+
+🠶 Ağ Katmanı
+🠶 IPv6 yönlendiricilerde paket parçalama seçeneği olmaksızın 128 bitlik uzun bir adres uzunluğu kullanır. IPv4 ise 32 bittir ve paket parçalamayı destekler. Ağ katmanında bulunan RPL (Routing Protocol for Low Power and Lossy Networks), iletim kanallarının güvenilmez olabileceği ve paket kayıplarının meydana gelebileceği IEEE 802.15.4 gibi standartlarla çalışmak üzere geliştirilmiş bir yönlendirme protokolüdür. Kablosuz kanalların çok güvenilir olmadığı, pille çalışan cihazların bulunduğu ağlarda yönlendirme sorunlarını çözmek için kullanılır. Hızlı şekilde ağ rotaları oluşturarak, yönlendirme bilgisi paylaşabilir ve topolojiyi verimli uyarlayabilir.
+ 
+İletişim Protokolleri
+
+🠶 Taşıma Katmanı
+🠶 Uygulama ve ağ katmanları arasında mantıksal bir bağlantı kurulmasını sağlamaktadır. TCP (transmission control protocol), UDP (user datagram protocol), TLS (transport layer security) ve DTLS (Datagram transport layer security).
+🠶 TLS ve DTLS gibi protokoller genellikle gizli dinleme veya mesaj sahteciliğini önlemek amacıyla nesnelerin interneti cihazlarında iletişimin güvenliğini sağlamak için kullanılmaktadır. DTLS UDP ile TLS ise TCP ile beraber kullanılmaktadır.
+ 
+Özellik	TCP	UDP
+Bağlantı durumu	Verileri iletmek için kurulmuş bir
+bağlantı gerektirir (iletim
+tamamlandıktan sonra bağlantı kapatılmalıdır)	Bir bağlantıyı açmak, sürdürmek
+veya sonlandırmak için herhangi bir gereksinimi olmayan bağlantısız protokol
+Veri sıralama	sıralayabilme	sıralama yapılamıyor
+Garantili Teslimat	Hedef yönlendiriciye veri
+teslimini garanti edebilir	Hedefe veri teslimi garanti
+edilemez
+verilerin yeniden iletimi	Kayıp paketlerin yeniden
+iletilmesi mümkündür	Kayıp paketlerin yeniden iletimi
+yok
+Hata kontrolü	Kapsamlı hata kontrolü ve verilerin onaylanması	Sağlama toplamlarını kullanan temel hata kontrol mekanizması
+transfer yöntemi	Veriler bir bayt akışı olarak okunur; mesajlar segment sınırlarına iletilir	tanımlı sınırlara sahip UDP paketleri; ayrı ayrı gönderilir ve varışta bütünlüğü kontrol edilir
+Hız	UDP'den daha yavaş	TCP'den daha hızlı
+yayın	Yayını desteklemiyor	Yayını destekliyor
+optimum kullanım	HTTPS, HTTP, SMTP, POP, FTP
+vb. Tarafından kullanılır	Video konferans, akış, DNS, VoIP
+vb.
+
+ 
+İletişim Protokolleri
+
+🠶 COAP
+🠶 The Constrained Application Protocol (COAP) kullanıcı-sunucu tabanlı bir protokoldür. Bu protokolün yardımıyla COAP paketi, COAP sunucusu tarafından yönlendirilen çeşitli istemci düğümleri arasında paylaşılır. Bu sunucu mantığına bağlı olarak detayları paylaşmakla görevlidir ancak tanımak zorunda değildir. COAP, durum aktarımı minyatürüne yardımcı olan taleple birlikte kullanılır. MQTT'den farklı olarak sistemli değildir.
+ 
+İletişim Protokolleri
+
+🠶 MQTT
+🠶  Message Query Telemetry Protocol (MQTT) İletişim tabanlı bir protokoldür. Ayrıca, nesnelerin interneti cihazlarında kullanılır. İstemciler, belirli mesajları almak için bir aracıya mesaj yayınlayabilir ve/veya bir aracıya abone olabilir (publish-subscribe model). MQTT basit, hafif ve güç tüketimi cimrisi olmasına rağmen gecikme ile ilgili sorunları bulunmaktadır.
+ 
+COAP	MQTT
+COAP, Kısıtlı Uygulama Protokolü anlamına
+gelir.	MQTT, Mesaj sorgusu telemetri aktarımı anlamına
+gelir.
+İletişim için bir istek-yanıt prototipi kullanır.	İletişim için yayınla-abone ol prototipini kullanır.
+Asenkron ve senkronize mesajlaşma kullanır.	Mesajlaşma için yalnızca eşzamansız modu kullanır.
+Kullanıcı Datagram Protokolü'nü (UDP) kullanır.	İletim Kontrol Protokolü'nü (TCP) kullanır.
+CAOP'nin Heather boyutu 4 bayttır.	MQTT'nin Heather boyutu 2 bayttır.
+RESTful tabanlıdır.	RESTful tabanlı değildir.
+Kalıcılık desteği yoktur.	Esas olarak canlı iletişim için kullanılır ve kalıcılık desteğine sahiptir.
+Mesajlara etiketler verecektir.	Böyle bir işlevi yoktur.
+Güvenli bir sisteme sahiptir ve kullanılabilirliği Utility alan ağlarındadır.	Çok güvenlidir ve kullanılabilirliği nesnelerin interneti uygulamalarındadır.
+Düşük Gecikme ve NAT (Network Address
+Translation) sorunları var.	Düşük Gecikme ve NAT (Network Address
+Translation) sorunları var.
+
+ 
+Nesnelerin İnterneti Ağ Türleri
+
+🠶 Kişisel, yerel ve geniş alan ağları olmak üzere üçe ayrılmaktadır.
+ 
+Kişisel alan ağı (Personal Area Network)
+
+🠶 PAN bir bilgisayar ağı sistemidir. Günümüzde bir endüstri standardıdır.
+🠶 Bir kişisel alan ağı kişisel dijital asistanların ve telefonların da dahil olduğu bilgisayar aygıtları arasında iletişim için kullanılan bilgisayar ağıdır. Bir PAN genellikle birkaç metre mesafededir. PAN'lar, internet veya daha yüksek seviyeli ağa bağlanmak için veya kişinin kendi kişisel aygıtları arasında iletişim için kullanılır. Kişisel alan ağlarında firewire ve usb gibi bilgisayar    kablosu    kullanılır.    Bir    kablosuz     kişisel     alan ağı  IrDA,  bluetooth,  kablosuz  USB,  Z-Wave  ve  ZigBee  gibi  kablosuz  ağ teknolojileri ile yapılır.
+ 
+Kişisel alan ağı (Personal Area Network)
+
+🠶 Bilgisayar aygıtları arasında iletişimi kurmak için kullanılan ağdır.Bunlar telefon, kişisel dijital asistanlar gibi kişiye yakın bulunurlar.Bu cihazlar söz konusu kişiye ait olabilir ya da olmayabilir. PAN'ın menzili birkaç metredir. PAN kişisel aygıtların birbirleriyle haberleşmelerinin yanı sıra, Internet veya bir yüksek düzeydeki ağa bağlantı gerçekleştirmek için de kullanılabilir. Kişisel alan ağları USB ve FireWire gibi veri yollarıyla kablolu kurulabilir.
+ 
+Yerel alan ağı (Local area network)
+
+🠶 Ev, okul, laboratuvar, iş binaları gibi sınırlı coğrafi alanda bilgisayarları ve araçları birbirine bağlayan bir bilgisayar ağıdır. Yerel alan ağları köprü oluşturarak birbirleri arasında bağlantı kurabilir. Bu şekilde daha büyük alanları kapsayacak şekilde genişletilebilir. Kurumsal ağlarda kablolu veya kablosuz kullanılırken, ev, okul ve ofis ortamlarında genellikle kablosuz olarak tercih edilmektedir. IEEE 802.3 ethernet, IEEE 802.11 Wifi en yaygın kullanılan yerel alan ağı standartlarıdır.
+ 
+Geniş Alan Ağları (Wide Area Networks)
+
+🠶 Genellikle geniş bir coğrafi alanı kapsar ve tipik olarak erişim ağlarının (Access network) omurga (backbone) ihtiyaçlarına hizmet etmektedir. Tipik olarak bir geniş alan ağı, birbirine bağlı birçok anahtar (switch) veya yönlendiriciden (router) ve erişim ağlarına bağlantı sunan sabit iletim bağlantılarından oluşmaktadır. Geniş alan ağlarının bir çok nesnelerin interneti uygulaması için dağıtılmış erişim ağlarını ve uygulama kaynaklarını birbirine bağlaması gerekmektedir. Farklı ağlar arasında veri paketlerini aktarmak   için   yönlendirme   tekniği   olan   IP   (Internet   protocol)   gibi standartlaştırılmış geniş alan ağı protokolü kullanmaktadır.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶  Radyo  Frekanslı  Tanıma  (Radio  Frequency  Identification-RFID)  teknolojisi, canlı ve cansız her türlü nesnenin dokunmadan belirli bir mesafeden tanınmasında ve izlenmesinde kullanılır.
+🠶 Etiketin içinde bir mikroçip ve mikroçipi saran bir anten bulunmaktadır. Okuyucu ile etiket arasında, elektromanyetik dalgalar vasıtasıyla iletişim kurulmaktadır. Okuyucunun yaydığı elektromanyetik dalgalar, bir enerji olarak çiple buluşup onu harekete geçirmekte ve etiketten okuyucuya veri transferi yapılmaktadır.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶 Son dönemlerde değişen rekabet ortamı ve teknoloji ve bilgi sistemlerindeki hızlı değişimler sonucunda RFID teknolojisinin iş süreçlerine çeşitli yenilikler getirdiği görülmektedir. RFID teknolojisinin getirmiş olduğu kolaylıklar dinamik ortamlarda nesnelerin tanımlanabilmesini ifade etmektedir. Dinamik ortamda nesnelerin tanımlanması ile iş süreçlerindeki birçok sorun (verimlilik, maliyet ve hız gibi) çözülebilmektedir.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶 RFID, Radyo Frekansıyla Tanımlama şeklinde adlandırılmaktadır. Kısaca RFID’yi oluşturan bileşenler radyo frekansıyla haberleşmektedir. Okuyucu, anten ve etiket olarak üç temel bileşenden oluşmaktadır. Okuyucular, nesnelere yerleştirilen etiketler sayesinde nesnelere ait bilgileri, radyo dalgalarını kullanıp; sayısal bir kod olarak alan bileşenleri ifade etmektedir.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶 Etiketler, bilgileri saklayan bileşenlere denir. Etiket ve okuyucunun arasındaki iletişim antenler aracılığıyla gerçekleşmekte ve buna bağlama denilmektedir. Okuma mesafesini genişletebilmek için ekstra antenler kullanılabilmektedir. Bünyesinde mikroişlemci ve anten bulunan bir etiket taşıyan nesnenin, bu etikette taşıdığı bilgilerle kullanılan kablosuz iletişim teknolojisiyle hareketlerinin izlenebilmesine fırsat sağlayan bir teknolojiyi ifade etmektedir.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶 RFID sistemleri kapsamında bağlama, manyetik veya elektromanyetik olmak üzere iki tür gerçekleşebilmektedir. Hangi yöntemin kullanılacağı; büyüklüğü, etiket maliyeti, okuma hızı ile uzaklığı gibi uygulama ihtiyaçlarına bağlı olarak belirlenmektedir. Manyetik bağlama, genel olarak kısa mesafe RFID sistemlerinde giriş kontrol uygulamalarında kullanılmaktadır.
+ 
+Radyo Frekansı ile Tanımlama Teknolojileri
+
+🠶 Elektromanyetik bağlamaysa okuyucu ve etiket arasındaki veri iletişimindeki en yaygın bağlama çeşididir. Bu yöntem kapsamında okuyucunun yaymış olduğu elektromanyetik dalgalar anten ile buluşarak etiket içerisindeki devreleri harekete geçirmektedir. Etiketin içerisindeki kondansatör, okuyucudan gelen dalgalarda bulunan enerjiyi almaktadır. Mikroçip bu enerjiyi kullanıp dalgaları okuyucuya geri göndermekte ve okuyucu da yeni dalgayı dijital veri haline dönüştürmekte ve okuma işlemi gerçekleşmektedir.
+ 
+Yakın alan iletişimi (NFC)
+
+🠶 NFC şeklinde adlandırılan, “Yakın Alan Teknolojisi” tablet ve akıllı telefon gibi cihazların arasında temassız iletişime verilen addır. Temassız iletişim NFC uyumlu cihazların arasında cihazların birbirine dokunmaksızın, temassız olarak bilgi alıp vermesini sağlamaktadır. Veri aktarım hızları ve uygulamalara kolaylıkla uyum sağlayabilmesi sebebiyle Avrupa, Amerika ve Asya’da hızla yaygınlaşmıştır.
+ 
+Yakın alan iletişimi (NFC)
+
+🠶 NFC teknolojisinin, özellikle mobil cihazlarda kullanıldığını belirtmek gerekir. Örneğin, tüketicilerin yanlarında birçok kart taşımak yerine NFC uyumlu cep telefonları vasıtalarıyla ödeme işlemleri rahatça gerçekleştirebilmektedirler. Burada NFC teknolojisi nesnelerin arasında bilgi alışverişine imkân sağlayıp; fiziki anlamda nesnelerin gerekliliğini ortadan kaldırmaktadır. Bu noktada, ödeme örneklerine bakılırsa, fazladan herhangi bir işlem yapılmaksızın tüketiciler yalnızca telefonlarını ödeme noktasına yaklaştırıp; ödeme işlemini yapabilmektedirler.
+ 
+Yakın alan iletişimi (NFC)
+
+🠶 NFC teknolojisinde veri paylaşımı Peer to Peer (P2P) modunda gerçekleştirilmektedir. Bu sistem benzer bir teknoloji olan “bluetooth” mantığında çalışmaktadır. İki cep telefonu arasında ses dosyası, müzik, kartvizit ve ajanda bilgileri gibi verileri aktarmada kullanılmaktadır. Bluetooth ile kıyaslandığında NFC’nin veri alışverişlerine başlama süresinin oldukça kısa ve güvenlik bakımındansa oldukça üstün olduğu görülmektedir. NFC’nin zayıf yönü ise yalnızca çok kısa mesafelerde çalışması ve veri hızının düşüklüğüdür. Bu nedenle çok fazla tercih edilen bir uygulama sistemi olmadığı görülmektedir.
+ 
+Bluetooth
+
+🠶 Bluetooth cep telefonlarından tıbbi cihazlara, bilgisayarlara ve müzik sistemlerine kadar birçok alanda kullanılan kablosuz haberleşme standardıdır.  Bluetooth  teknolojisi  lisanssız  ISM  (Industrial,  Scientific  and Medical) bandını kullanarak haberleşme yapar. Bluetooth’un kullandığı band genişliği 2.4 GHz ile 2.4835 GHz arasındaki frekanslara denk gelmektedir.
+ 
+Bluetooth
+
+🠶 Bluetooth SIG 1999 yılından itibaren günümüze kadar birçok versiyon yayınladı. Bu versiyonlar bazı yeni özellikler eklerken Bluetooth teknolojisinin daha ileriye gitmesini sağlamıştır. Ancak 2010 yılında yayınlanan Bluetooth 4 diğer ismi ile Bluetooth Low Energy (BLE) eski versiyonlarından farklı bir seviyededir. Bu yeni versiyon sürekli veri gönderme prensibinden farklı olarak periyodik veri gönderme ve düşük enerji tüketme amacı ile tanıtılmıştır. Bluetooth 4 öncesi yüksek kaliteli ses ve veri aktarmak için geliştirilmişken Bluetooth 4 ve sonrası daha az enerji tüketme ve uzun süre çalışma amacı ile geliştirilmiştir. Bluetooth 4 ve sonrasındaki versiyonlarla birlikte Bluetooth sensör ağlarında kullanılmaya başlanmıştır. Bu sebeple Bluetooth teknolojilerini incelerken BLE öncesi ve BLE sonrasında tanıtılan versiyonlar olarak ayrılmıştır .
+ 
+Bluetooth
+
+🠶 Bluetooth 4 (BLE)
+🠶 Bluetooth 4.0 (BLE) protokolü düşük enerjili Bluetooth teknolojisinin ilk versiyonudur. 2010 yılında standart yayını yapılmıştır. BLE ile birlikte düşük güç tüketimi ve uzun pil ömrü konuşulmaya başlanmış ve uzun süreli şarj gerektirmeyen sensör kartlarının temeli atılmıştır.
+ 
+Bluetooth
+
+🠶 Bluetooth 5
+🠶 Buetooth 5 temelde BLE ile aynı yapıya ve amaca sahip olsa da büyük farklılıkları mevcuttur. Bu farklılıkları ana başlık altında özetlemek istersek şunlardır.
+🠶 2× hız
+🠶 4× mesafe
+🠶 8× yayın kapasitesi
+🠶 Bu farklılıklar Bluetooth 5.0’ı IoT için daha önemli hale getirmiştir. Bluetooth 5 protokol mimarisi olarak BLE ile aynı yapıya sahiptir. Ancak mesafe, hız ve yayın kapasitesini arttırabilmek için PHY katmanında değişiklikler yapılmıştır.
+ 
+Zigbee/ IEEE 802.15.4 Teknolojisi
+
+🠶 Zigbee benzeri ağlar üzerinde çalışmalar 1990’lı yıllarda başlamıştır. Zigbee teknolojisinin geliştirilmesine yönelik olarak 2002 yılında Zigbee Alliance kurulmuştur. Zigbee Alliance, Zigbee teknolojisi standartlarını belirleyen dünya genelinde bir yapı olarak Philips, Mitsubishi Electric, Honeywell, Motorola,  Sharp,  Ivensys  gibi  25  kadar  firmanın  biraraya  gelmesiyle oluşmuştur. 2003 yılı mayıs ayında IEEE tarafından 802.15.4 standardının tamamlanmasıyla Zigbee 1.0’ın kurulumu gerçekleşmiştir. 14 Aralık 2004 tarihinde ZigBee özellikleri onaylanmıştır. Zigbee ilk olarak, Haziran 2005 tarihinde kullanılmaya başlamıştır. Zigbee, yeni teknolojik özellikleriyle 30 Eylül 2007'de kullanıma sunulmuştur. 2 Kasım 2007'de ilk kez ZigBee ev otomasyonu piyasaya sürülmüştür.
+ 
+Zigbee/ IEEE 802.15.4 Teknolojisi
+
+🠶 Zigbee, Kablosuz iletişim teknolojileri arasında IEEE tarafından 802.15.4 adıyla standartlaştırılmış bir protokoldür. Kablosuz, düşük hızlı, kişisel yerel ağ (LR- WPAN, Low Rate Wireless Personal Area Network) haberleşmesi olarak bilinen Zigbee protokolü, birbirinden çok farklı cihazların senkron çalışabilecek şekilde bağlantı kurmasını sağlamaktadır. Küçük boyutlu veri alışverişi ile çalışan uygulamalarda, farklı RF uygulamalarının kullanılmasına olanak sağlaması, kolay kullanımı, çok düşük güç tüketme prensibi ve düşük kurulum maliyeti ile ön plana çıkmaktadır. Zigbee teknolojisi ile karmaşık yapıya sahip ağlar kurmak ve genişletmek ve mümkündür
+ 
+Zigbee/ IEEE 802.15.4 Teknolojisi
+
+🠶 Zigbee’nin diğer iletişim standartlarına göre ayırt edici özellikleri şunlardır:
+🠶	Çoklu gözetleme ve uygulama denetimi sağlayan ağ topolojisini destekler.
+🠶 Düşük maliyetli ve pratik ağ kurulumuna sahiptir.
+🠶 Veri iletim hızı 20 - 250 Kbps arasındadır.
+🠶 Düşük güç tüketimi sayesinde standart bir pil ile birkaç yıl süren pil ömrü vardır.
+🠶 Yüksek güvenlikli haberleşme sağlar.
+ 
+Zigbee/ IEEE 802.15.4 Teknolojisi
+
+🠶 Otomotiv Sektörü: Araçlarda, hareketli parçaların kontrolünde özellikle de kablolama yapılamayan kısımlarda örneğin, lastiklerin hava basıncını izlemede kullanılır.
+🠶 Güvenlik Sistemleri: Güvenlik, gaz, yangın, su algılama sistemlerinde, alarm ve güvenlik kontrol noktalarında kullanılır.
+🠶 Sağlık Sektörü: Hasta takibinde, tansiyon, nabız ve diğer sağlık bilgilerinin izlenmesinde kullanılır.
+🠶 Tarım ve Hayvancılık: Topraktaki nem, ısı, kimyasal durumu vb. gibi verilerin izlenmesinde ve ürün yetiştirme optimizasyonu sağlar. Besi hayvanlarının vb. uzaktan izlenmesinde kullanılır.
+ 
+Zigbee/ IEEE 802.15.4 Teknolojisi
+
+🠶 Endüstriyel alanda: Proses kontrolü, enerji-aydınlatma yönetimi, endüstriyel cihazların kontrolünde kullanılır.
+🠶 Bina ve Ev Otomasyonu: HVAC (Isınma, Havalandırma ve Klima Sistemlerinde), aydınlatma kontrolü, güvenlik kontrollerinde, ev otomasyonunda müzik ve sinema sistemlerinin kontrolünde, bina giriş – çıkış kontrollerinde kullanılmaktadır.
+🠶 Trafik Sistemleri: Araçların algılama, izleme ve kontrol sistemlerinde kullanılır.
+ 
+
+
+
+
+
+ 
+ 
+6LoWPAN
+
+🠶 Nesnelerin interneti üzerindeki WSN’de kullanılan en küçük ve kaynak kısıtlı cihazlara IP adresi verilebilmesi için 6LoWPAN Protokolü oluşturuldu. 6LoWPAN standardı herkesin kullanması ve uygulanması için açıktır. 6LoWPAN,  düşük  güçteki  WPAN’lar  üzerinden  IPV6’yı  temsil  eden  bir kısaltmadır. Amaç, güç ve alan kısıtlaması olan ve yüksek bant genişliği ağ hizmetlerine ihtiyaç duymayan aygıtlar için düşük güçlü RF iletişim sistemleri üzerinden IP iletişimi sağlanmasıdır. 6LoWPAN’ın ana avantajı, en basit algılayıcıların IP adreslenebilirliği sahip olmaları ve 3G / 4G / LTE / Wi-Fi / Ethernet yönlendiricileri üzerinden bir ağ cihazı olarak hareket etmeleridir.
+ 
+6LoWPAN
+
+🠶 Pratikte, gömülü aygıtlardaki 6LoWPAN için, 6LoWPAN adaptasyon katmanı ve IPv6 birlikte uygulanmaktadır. Böylece bu iki katman, ağ katmanının bir alternatifi olarak gösterilir. 6LoWPAN ile kullanılan en yaygın taşıma protokolü, aynı zamanda 6LoWPAN formatı ile de sıkıştırılabilen UDP’dir. TCP, performans, verimlilik ve karmaşık yapısı nedenleriyle 6LoWPAN’da genellikle kullanılmaz. Erişim kontrolü ve komşu bulma iletileri için ICMPv6 kullanılır. Uygulama protokolleri, genellikle uygulama özelinde farklılaşmaktadır. Zamanla daha fazla standart uygulama protokolü kullanılabilir hale getirilmektedir.
+ 
+6LoWPAN
+
+🠶 IPv6 ile 6LoWPAN biçimi arasındaki dönüşüm, kenar yönlendiriciler olarak adlandırılan ve 6LoWPAN sensör alanlarının kenarında konumlandırılan yönlendiriciler tarafından gerçekleştirilir. Kenar yönlendiricilerdeki dönüşüm, her iki yöne de yapılmaktadır. Kenar yönlendiricisi dört işlevden dolayı gereklidir.
+🠶 6LoWPAN cihazlarıyla iletişimi yönetir ve verileri internete aktarır.
+🠶 Tipik bir 40 baytlık IPv6 başlığını, kullanıma bağlı olarak 2 ila 20 bayta
+sıkıştırabilir. Ayrıca 8 baytlık UDP başlığı da sıkıştırabilir.
+🠶 6LoWPAN ağını başlatır.
+🠶 6LoWPAN ağındaki cihazlar arasında veri alışverişi yapar.
+ 
+
+ 
+Z-Wave
+
+🠶 Z-Wave, ev otomasyon sistemlerinde kullanılan yenilikçi bir kablosuz iletişim protokolüdür. Bu teknoloji, termostatlar, alarmlar, aydınlatma, klima ve havalandırma üniteleri veya elektronik ses ve video ekipmanı gibi ev elektroniği cihazlarında kullanılır. Z-Wave, ağdaki her cihazın kontrol komutları gönderip alabileceği bir MESH ağ oluşturma teknolojisidir. Aygıtlar ayrıca belirli modüllerin çalışmasını kontrol etme ve izleme yeteneğine sahiptir ve merkezi birime durumlarını sürekli olarak bildirir. Bireysel olarak veya grup halinde çalışabilir, birbirleriyle iletişim kurabilir, size sınırsız ev otomasyonu yönetimi imkânları sağlayabilirler.
+ 
+Z-Wave
+
+🠶 Kablosuz ev kontrolü uygulamaları için tasarlanan Z-Wave radyo ağı, her 5- 15 dakikada bir iletişim kuran, nispeten az düğüm noktası için tasarlanmıştır. Z-Wave radyo frekansları Amerika’da 908,42 MHz, Avrupa'da 868.42 MHz, Hong Kong'da 919.82 MHz ve Avustralya'da 921.42 MHz'dir. Çoğu ev içi kablosuz ürünün (2.4 GHz) kullandığı banttan çok daha düşük bir bant olduğu için, onların girişiminden ve "trafik sıkışmalarından" etkilenmez.
+ 
+Z-Wave
+
+🠶 Z-Wave'in önemli bir avantajı, birlikte çalışabilirliğidir. Tüm Z-Wave cihazları, tip, versiyon veya markaya bakılmaksızın diğer tüm Z-Wave cihazlarıyla konuşur. Dahası, birlikte çalışabilirlik Z-Wave ekosisteminde geriye ve ileriye uyumludur. Yani bugün piyasaya sunulan Z-Wave ürünleri on yıllar öncesinden Z-Wave ürünleriyle ve gelecekte ürünlerle (ancak işlevsellik konusunda bazı sınırlamalara rağmen) çalışacaktır.
+ 
+Z-Wave
+
+🠶 Z-Wave yalnızca radyo kullanarak mesajlar gönderir. Herhangi bir nedenle radyo mesajlaşması başarısız olursa, Z-Wave iletileri almak için elektrik hattına güvenmez. Bu nedenle, Z-Wave tasarımcıları bu protokolün olabildiğince güvenilir olmasını sağlamak için ona nispeten karmaşık özellikler sunmaktadır.
+🠶 En önemlisi, Z-Wave, bir Kaynak Yönlendirme Algoritması (SRA) kullanarak ağ üzerinden mesaj yönlendirir. SRA, en ideal yolu hesaplayıp, iletilerin başlatmak için ağdaki diğer aygıtların (topolojinin) düzenini bilmek ister. Bir ağ topolojisi veri tabanının bakımını yapmak ve bilgiyi dağıtmak, özellikle ağdaki bazı cihazlar mobil olduğunda karmaşık bir yazılım görevidir. Bu nedenle, maliyetleri düşürmek için Z-Wave, köleler olarak adlandırılan ve mesaj başlatamayan en düşük maliyetli cihazlarla farklı cihaz türlerini tanımlar.
+ 
+
+
+
+
+
+
+
+
+
+
+Nesnelerin İnterneti
+3.	Hafta Ders Notları
+Nesnelerin İnterneti (IoT) Mimarisi ve İletişim Prokolleri
+Dr. Öğretim Üyesi Osman ALTAY
+ 
+Wi-Fi
+
+🠶 1997 IEEE tarafından duyurulan Wi-Fi, IEEE 802.1 standartlarına dayanan kablosuz yerel alan ağı (Wireless Local Area Network WLAN)’dır. Wi-Fi kar amacı gütmeyen bir organizasyon olan Wi-Fi alliance tarafından yönetilir. 1999 yılından beri geliştirilmekte ve yaygın olarak kullanılmaktadır. IEEE 802.11a, IEEE 802.11b, IEEE 802.11g, IEEE 802.11n ve IEEE 802.11ac gibi farklı
+versiyonları bulunmaktadır. Wi-Fi özellikle cihazların yakınlardaki kablosuz erişim noktaları aracılığıyla yerel alan ağına bağlanmasını sağlamaktadır.
+ 
+Wi-Fi
+
+🠶 Bağlantı, kablosuz erişim noktaları ve cihazın ortak desteklediği, IEEE 802.11 protokolüne bağlı olarak 2.4 GHz veya 5 GHz radyo frekansında gerçekleştirilir. Veri, CSMA/CA (Carrier sense multiple access with collision avoidance) protokolüne uygun gönderilip alınır ve böylece paketlerin iletimi sırasında hata oluşması sorunu çözülür.
+ 
+Wi-Fi
+
+🠶 2.4 GHz ve 5 GHz Wi-Fi frekans bantlarını karşılaştırırken iki önemli şeye dikkat etmeniz  gerekir. Birincisi: kapsama alanı veya menzil ve ikincisi, hız veya bant genişliği. Bant genişliği, ölçülen bir süre içinde aktarılan maksimum veri miktarını ifade eder. 2.4 GHz’de toplamda 14 tane kanal bulunmaktadır. Ancak bu kanallar içice geçmiş durumdadır. Bundan dolayı aynı anda tüm kanalları kullanamaz. 5GHz frekans bandı daha fazla kanal içermektedir. Ve kanallar iç içe geçmezler. Bundan dolayı da birbirlerini etkilemeden çalışabilir. Fakat frekans bandı kapsamında 2.4 GHz’e göre dezavantajlıdır.
+ 
+Wi-Fi
+
+🠶 Wi-Fi; kişisel bilgisayar, akıllı telefon, oyun konsolu ve dijital işitsel cihazların kablosuz ağ sahası içerisinde internete bağlanmasını sağlayan bir teknolojidir. Wi-Fi'ın erişim noktaları, bir oda gibi küçük alanlardan, birkaç milkarelik geniş alanlara kadar etki edebilir, buralarda internet erişimini sağlayabilirler. Ev ve ofislerdeki özel kullanımının yanında kamuya ait alanlarda da ücretsiz olarak veya diğer ticari şekillerde kullanılmaktadır. Havaalanları, otel ve restoran gibi yerlerde genel olarak bu hizmet ücretsiz olarak sağlanmaktadır. 2008'den bu yana 300 metropolite Wi-Fi (Muni-Fi) projesi başlamıştır.
+ 
+Wi-Fi
+
+🠶 802.11b standardı kablosuz yerel ağlar için ilk yayınlanan standarttır ve 2.4 GHz frekans bandı kullanarak en fazla 11 Mbps bant genişliği sunar. 802.11a
+5 GHz frekans bandı kullanır ve en fazla 54 Mbps bant genişliği sunar. 802.11g ise 802.11a’nın sunduğu 11 Mbps ile yetinmek durumunda kalan ülkelerin bant genişliği ihtiyacını karşılamak için her iki standardın avantajlı yönlerinin birleşmesinden oluşturulmuştur. 802.11n 2.4 GHz kullanır ve en fazla 450 Mbps bant genişliği sunar. 802.11ac standardı 5 Ghz kullanır ve en fazla 1300 Nbps bant genişliği sunar.
+ 
+Wi-Fi
+
+🠶 802. 11 3 temel topolojiyi desteklemektedir.
+🠶  Infrastructure: 802.11 istasyonu (akıllı telefon gibi bir cihaz), bir erişim noktası (Acces point) ile iletişim kurmaktadır. Erişim noktası ağ geçidi veya yönlendirici olabilir. Yıldız topolojisi kullanmaktadır. Infrastructure basic service set (BSS) olarak da anladırılır.
+🠶 Ad Hoc: Her istasyonun diğer istasyonlarla iletişim kurduğu bir eşler arası (p2p) bağlantı topolojisidir. Erişim noktası ya da yıldız topolojisi kullanılmaz. Independent basic set service (IBSS) olarak adlandırılır.
+🠶 Distribution system: Erişim noktası ara bağlantıları aracılığıyla iki veya daha fazla bağımsız BSS ağını içermektedir.
+ 
+Wi-Fi
+
+🠶 802.11ah 2016 yılında yayınlanmıştır. 802.11ah frekans protokolü 900 MHz desteleyecek    şekilde  tasarlanmıştır.  Aynı  zamanda,  nesnelerin  İnterneti kavramını destekleyen, sinyalleri paylaşmak için işbirliği yapan büyük istasyon veya sensör gruplarının oluşturulmasına izin vererek daha düşük enerji tüketiminden de yararlanmaktadır. Protokolün düşük güç tüketimi Bluetooth ile rekabet eder seviyededir ve daha yüksek veri hızları ve daha geniş kapsama alanı avantajına sahiptir.
+ 
+LoRaWAN
+
+🠶 IoT pazarında farklı uygulamalar için birçok teknoloji ve iletişim protokolü bulunmaktadır. Uygun maliyet, uzun menzil ve düşük güç tüketimi	gibi	ihtiyaçların	bulunduğu	endüstriyel uygulamalarda LoRaWAN protokolü öne çıkmaktadır.
+🠶 LoRaWAN, düşük güçlü geniş alan IoT ağları için küresel bir standarttır. LoRaWAN protokolü, çok düşük güç tüketimi ile uzun menzilli (birkaç kilometre) çift yönlü iletişim sunan standart ağ protokolüdür. İletişim menzili, cihazlar arasındaki engellere ve çevresel koşullara göre değişiklik göstermektedir.
+ 
+LoRaWAN
+
+🠶 A Sınıfı :
+🠶 Tüm LoRaWAN uç cihazları tarafından desteklenmesi gereken varsayılan sınıf olan A sınıfı iletişim her zaman uç cihaz tarafından başlatılır ve tamamen eşzamansızdır. Uç cihaz, kendi uygulaması tarafından tanımlanan süre boyunca düşük güçte uyku moduna girebilir: periyodik uyandırma için ağ gereksinimi yoktur. Bu, A sınıfını en düşük güçte çalışma modu haline getirirken herhangi bir zamanda yukarı bağlantı iletişimine izin verir.
+ 
+LoRaWAN
+
+🠶 B Sınıfı :
+🠶 A sınıfı cihazlara göre daha fazla alma yuvasının kullanılabildiği çift yönlü iletişim yapabilen uç cihazlardır. B sınıfı cihazlar belirtilen zamanda fazladan alma pencereleri açabilir. Periyodik işaretler kullanarak ağa senkronize bir şekilde yeni pencereler açabilmektedir.
+ 
+LoRaWAN
+
+🠶 C sınıfı:
+🠶 Gecikme olmadan gelen mesajları sürekli olarak dinlemektedirler. Buna dayanarak, ağ sunucusu, uç cihaz alıcısının açık olduğu ve dolayısıyla gecikme olmadığı varsayımıyla herhangi bir zamanda bir uydu-yer bağı iletimini başlatabilir. Gücün mevcut olduğu gerçek zamanlı uygulamalar için uygundur.
+ 
+Hücresel-5G
+
+🠶 Beşinci nesil teknolojisinin, mevcut kullanılan dördüncü nesil’ e göre en büyük farklı yükse veri hızı, bir milisaniyelere varan düşük gecikme süreleri, yüksek veri kapasitesi ve haberleşme sisteminin yazılım tabanlı olmasıdır. Yüksek bant genişliği yeniliği ile aynı anda milyarlarca cihaz ile bağlantı sağlama imkânı tanınacaktır. Bu yüksek alt yapı teknolojisi otomotiv, enerji, tarım, eğlence, sağlık, akıllı şehirler ve kentleşmeler alanlarında devrim niteliği gibi değişimler beklenmektedir. Dördüncü Nesil haberleşme teknolojisi kullanıcıları birbirinin iletişimi hedeflerken beşinci nesil teknolojisi ise her şeyin birbirine bağlanmasını hedeflemektedir.
+ 
+Hücresel-5G
+
+🠶 Beşinci Nesil mobil haberleşme sistemi gelecekte dünyanın pek çok ülkesinde dördüncü nesil haberleşme sisteminin yerini alacaktır. Yeni nesil haberleşme sistemleri bulut teknolojileri, yazılım tabanlı ağ mimarisi, sanallaştırma gibi kablosuz ve ağ teknolojilerini yapılan çalışmalar üzerinden geliştirilmektedir. Beşinci nesil teknolojisi dördüncü nesil teknolojisine göre 10 Gbps yüksek hızlarının yanı sıra Nesnelerin interneti teknolojisi ile milyarlarca nesnelerin birbirine bağlanması fazla kapasite ve çok düşük gecikme süresi hedeflenmektedir. Nesnelerin interneti ile mobil sistemleri, araba-araba iletişimi, akıllı şebeke, akıllı park, blok zincirli tabanlı servisler gibi yeni ağ hizmetleri ve teknolojileri oluşturarak mobil sistemlerine bağlı bir toplum hedeflenmektedir.
+ 
+NB-IoT
+
+🠶 NB-IoT yani Narrow-Band (Dar bandnesnelerin interneti için, Nesnelerin İnterneti  (IoT)  için  bir  kablosuz  iletişim  standardı  NB-IoT,  az  miktarda  veri, düşük bant genişliği ve uzun pil ömrü gerektiren cihazları bağlamayı sağlayan LPWAN-Low Power Wide Area Network kategorisine ait bir şebekedir. NB-IoT ile konumu değişmeyen, uzaktan kontrol edilmesi gereken çok sayıda uç cihazınızı etkili ve kesintisiz biçimde yönetebilirsiniz. Güç tüketimi sorunu ve kapalı alanlardaki kapsama sorunlarına çözüm olarak NB-IoT’de  GSM’e  göre  +20dB  daha  iyi  çekim  gücü  büyük  avantajlar sunmaktadır. M2M ve IoT cihazlarınızı nispeten düşük maliyetle daha geniş bir aralıkta kablosuz iletim gerektiren ve uzun pil ömrü için az güç kullanan uygulamalar için kullanabilirsiniz.
+ 
+LTE-M
+
+🠶 LTE-M (ayrıca LTE-MTC ve LTE Cat M), LTE kurulu tabanın genişletilmiş kapsama ile yeniden kullanılmasına izin veren bir LPWAN teknolojisi. LTE- Machine Type Communication (MTC) anlamına gelen LTE M, aynı zamanda, özellikle IoT uygulamaları için cihazları ve hizmetleri etkinleştirmek için 3GPP tarafından geliştirilen bir LPWAN teknolojisidir. LTE-M, 3GPP Sürüm 13 için 1 Mb/sn, Sürüm 14 için 4 Mb/sn'ye yükselen veri hızı, ağ üzerinde daha fazla mobilite ve ses yeteneği sunar.
+ 
+Sigfox
+
+🠶 Sigfox, Avrupa'da 868 MHz ve ABD'de 902 MHz kullanan Endüstriyel, Bilimsel ve Tıbbi radyo bandını kullanarak iletişimi sağlayan diferansiyel ikili faz kaydırmalı anahtarlamayı (DBPSK) ve Gauss frekans kaydırmalı anahtarını (GFSK) kullanır. "Ultra Dar Bant" olarak adlandırılan ve çok az enerji gerektiren katı nesnelerden serbestçe geçen geniş erişimli bir sinyal kullanır ve "düşük güçlü geniş alan ağı" (LPWAN) olarak adlandırılır. Ağ, tek atlamalı yıldız topolojisine dayalıdır ve oluşturulan trafiği taşımak için bir mobil operatör gerektirir. Sinyal, geniş alanları kolayca kaplamak ve yer altı nesnelerine ulaşmak için de kullanılabilir.
+ 
+Protokol	Veri hızı	Menzil	Güvenlik	Güç tüketimi	Başlık boyutu	Gecikme	Frekans
+NFC	206,2012,424,828
+Kbps	0-10 cm	LPI/D	Düşük	4 bayt	Düşük	13.56 MHz
+Z-Wave	9.6, 40, 100 Kbps	0-100m	Hayır	Düşük	Değişir	Düşük	Bölgesel alt Ghz bantları, 915 US,
+868 EU
+Thread	40-250 Kbps	0-30m	TLS,DTLS	Düşük	Sıkıştırma	Düşük	2.4 Ghz
+Bluetooth Low Energy	1 Mbps	0-100m	ALES 128 bit	Düşük	2 bayt	Düşük	2.4 Ghz
+ZigBee	20, 40, 250 Kbps	0-100m	ALES 128 bit	Düşük	15 bayt	Düşük	Bölgesel alt Ghz bantları, 915 US,
+868 EU ve 2.4
+GHz
+6LoWPAN	250Kbps	0-50m	ALES 128 bit, TLS,DTLS	Düşük	Sıkıştırma	Yüksek	2.4 Ghz
+Wi-Fi	11,54,600,1300 ve
+6.9 Gbps	0-100m	AES ve WPA2	Yüksek	32 bayt	Yüksek	2.4 GHz-5.8 GHz
+SigFox	100-600 bps	15-50 km	Private key,
+VPN+SSL	Düşük	Değişir	Yüksek	Bölgesel alt Ghz
+bantları
+Lora	0.3-50 kbps	2-15 km	128 bit encryption	Düşük	Değişir	Düşük	Bölgesel alt Ghz bantları
+NB-IoT	250 kbps	1-15 km	EPS-AKA	Orta	-	Düşük	600 MHz-6 GHz
+LTE-M	1 Mbps	1-11 km	Var	Orta	-	Düşük	600 MHz-6 GHz
+4G	1 Gbps	30 km’ye kadar	Enhanced SNOW 3G	Yüksek	Değişir	Düşük	LTE Bantları
+
+ 
+Sensör ve Aktüatörler
+
+🠶 Sensörler ve aktüatörler nesnelerin interneti için önemlidir. Dönüştürücü olarak da adlandırılan sensör, görevi yakın çevresindeki olayları veya değişiklikleri algılamak ve bu fiziksel olayları (sıcaklık, ışık, hava nemi, hareket, kimyasal maddelerin varlığı ve diğerleri gibi) elektriksel darbelere dönüştürmek olan bir cihazdır. o zaman anlamlı bir şekilde yorumlanabilir. Aktüatör ise sensöre ters çalışan bir araç olarak görülebilir. Kontrol sisteminden gönderilen elektriksel darbeleri yorumlayarak ve bunları mekanik harekete dönüştürerek, valflerin açılması ve kapatılması, diğer cihazların konumunun değiştirilmesi veya bunlarla sınırlı olmamak üzere çeşitli basit eylemler yoluyla aslında fiziksel çevresine değişiklikler getirir.
+ 
+Sensör ve Aktüatörler
+
+🠶 Sıradan elektrikli sensörler ve aktüatörler on yıllardır ortalıkta ve modern endüstriyel  uygulamalarda  her  yerde  bulunurken,  Nesnelerin  İnterneti'nin ortaya çıkışı, yalnızca endüstriyel sektörde değil, aynı zamanda tüm dünyada nesnelerin interneti sensör ve aktüatör uygulaması için tamamen yeni olanaklar açtı. ticari ve evsel kullanım alanı. Nesnelerin internetinin vazgeçilmez sağlayıcıları olan sensörler ve aktüatörler, akıllı araçlardan yağmur ormanlarının korunmasına kadar hemen hemen her tür sektörde operasyonların izlenmesine, kontrol edilmesine ve düzene konulmasına yardımcı olur. Uygulama şekillerinde devrim yaratan ve kullanılma kapsamını genişleten Nesnelerin İnterneti, makineler, insanlar ve çevre için benzer şekilde akıllı çözümler geliştirmek üzere güçlü, bulut tabanlı analitik yazılımlar için sensörlerin değerini arttırmıştır.
+ 
+Sensörler
+
+🠶 Sıcaklık sensörü : Bir nesne ya da sistem tarafından üretilen ısı enerjisi miktarını ya da soğukluğunu ölçerek analog ya da dijital çıkış üreten sıcaklıktaki bir fiziksel değişikliği algılamamamızı veya algılamamızı sağlar. Bilgisayar, araba, klima, cep telefonu, ekran kartı vs.
+🠶 Işık sensörü : Ortamdaki ışık seviyesini algılarlar.
+🠶 Basınç sensörü : Gaz ve sıvıların basıncını ölçerler.
+🠶 Duman ve gaz sensörü : Ortamdaki duman ve gaz seviyesini ölçerler.
+🠶 Nem sensörü : havadaki ya da cihazdaki nemi ölçerler.
+🠶 Akselerometre: ivmeyi ölçer.
+ 
+Sensörler
+
+🠶 Jiroskop : Yönelimi ve açısal hızı ölçmek için kullanılır.
+🠶 Ses sensörü : ses dalgalarını algılarlar.
+🠶 Görüntü	sensörü:	ışık	dalgalarının	değişken	zayıflamasını	kullanarak
+görüntüye dönüştürürler.
+🠶 GPS: uydudan gelen sinyalleri kullanarak cihazın yerini tespit ederler.
+🠶 Manyetik sensör: Cihazın manyetik alanını ölçme ve ekran konumunu sabitlemek için kullanılır. Güvenlik ve askeri sistemlerde konum izleme ve hırsızlık önleme amaçlı kullanılır.
+🠶 Eğim sensörü: Bir nesnenin eğimini yer çekimi yönüne göre ölçer.
+ 
+Sıcaklık
+
+🠶 Bu en temel sensör türü, havanın, çalışma ortamının, makinelerin veya diğer nesnelerin termal koşullarını takip etmenin hayati önem taşıdığı her türlü IoT kullanım durumunda uygulamasını bulur. Sıcaklık sensörleri, dengeli ve maksimum büyüme sağlamak için toprak sıcaklığının izlendiği üretim tesislerinde, depolarda, hava durumu raporlama sistemlerinde ve tarımda özellikle yararlıdır.
+ 
+Sıcaklık
+
+🠶 Termistör: Direnci (direnci) önemli ölçüde sıcaklığa bağlı olan bir direnç türü. Termistörler elektronikte sensörler olarak yaygın olarak kullanılmaktadır, örn. elektronik termometrelerde veya aşırı akım artışını önleyen sistemlerde sıcaklık sensörleri olarak.
+🠶 Direnç sıcaklığı detektörleri: Sıcaklık değişiklikleriyle ilişkili dirençteki bir değişikliğe dayalı olarak sıcaklığı ölçmek için kullanılan cihazlar.
+🠶 Termokupllar: İki farklı iletkenden oluşan bir elektrik devresinin elemanları. Bir termokuplun konnektörleri arasında ortaya çıkan elektromotor kuvvetin sıcaklık farkıyla orantılı olduğu gerçeğini kullanarak, termokupllar sıcaklık sensörleri olarak
+ 
+Nem
+
+🠶 En belirgin ve yaygın kullanımları meteoroloji istasyonlarında hava durumunu bildirmek ve tahmin etmek olsa da, oldukça şaşırtıcı bir şekilde, nem ve nem sensörleri tarım, çevre izleme, gıda tedarik zinciri, HVAC ve sağlık izleme alanlarında da yaygın olarak kullanılmaktadır.
+🠶 Saç gerilimi nem sensörü: geleneksel ve en eski nem sensörü türüdür. Cihazın tasarımı insan veya at kıllarının spesifik özelliklerine dayanmaktadır, ancak şu anda sentetik veya pamuk lifleri de kullanılmaktadır. Bu lifler, nem ile temas ettiklerinde uzunluklarını değiştirir. Tartıdaki değeri gösteren işaretçi saça (veya elyafa) bağlıdır ve uzunluğundaki bir değişikliğe tepki verir. Bu tür nem sensörünün şüphesiz avantajı, aynı zamanda hasara karşı dayanıklı olan basit ve ucuz bir yapıdır.
+ 
+Nem
+
+🠶 Psikrometre: Bu tür bir cihazın yapısı iki termometreye dayanır ("kuru" ve "ıslak"   olarak   adlandırılır).   Islak   termometre,   nem   emici   malzeme   ile kaplanmış cıvalı bir kaba sahiptir. Nem ne kadar yüksek olursa, ıslak termometrenin sıcaklığı o kadar düşük olur. Kuru termometre ortam sıcaklığını gösterir ve nem, sıcaklık farkından hesaplanabilir.
+ 
+Işık
+
+🠶 Ortam ışık yoğunluğuna bağlı olarak akıllı TV'ler, cep telefonları veya bilgisayar ekranları ışık sensörleri sayesinde parlaklıklarını ayarlayabilmektedir, ancak ortam ışığını algılamaya yönelik sensörler sadece tüketici elektroniğinde değil, akıllı şehir uygulamalarında da yaygın olarak bulunmaktadır. Artan ekonomi için sokak ışıklarını veya kentsel aydınlatma seviyelerini uyarlamak için giderek daha fazla kullanılmaktadırlar.
+ 
+Işık
+
+🠶  Fotodirenç: Direnci radyasyon yoluyla değişen ışığa duyarlı bir elementtir. Analog ışık sensörü olarak örneğin Arduino'ya kolayca bağlanabilir. Bu sayede örn. karanlıktan sonra otomatik olarak yanan lambalar.
+🠶 Fotodiyot: Diyot çeşitlerinden biri olan fotodiyot, aynı zener diyot gibi ters yönde başlayıp çalıştırılabilen bir diyottur. Üzerine düşen ışık şiddeti arttığında ters yönde orantılı olarak sızıntı akım değeri artan elemandır. Fotodiyotlar endüstriyel otomasyon (sinyalleme ve kontrol sistemleri), telekomünikasyon (optokuplörler, optoelektronik bağlantılar) ve daha birçok endüstride yaygın olarak kullanılmaktadır.
+ 
+Akustik Sensörler
+
+🠶 Akıllı akustik sensörler, belirli bir ortamdaki gürültü seviyesini izlememizi sağlar. Gürültü kirliliğinin önlenmesine yardımcı olmak için ölçüm yapabilen ve veri sağlayabilen akustik IoT sensör sistemleri, akıllı şehir çözümlerinde zemin kazanıyor.
+🠶 Hidrofon: Suda veya diğer sıvılarda yayılan sesleri toplamak için kullanılan bir mikrofon. Hidrofonlar, örneğin çeşitli su ortamlarında balıkları tespit etmek için kullanılan pasif sonarların temel bir yapısal elemanıdır.
+🠶 Jeofon: Yer titreşimlerini (frekans ve genlik) elektrik voltajına çeviren sensördür. Apollo 16'nın Aktif Sismik Deneyinde ayda bu şekilde kullanıldığını söyleyebilirsiniz.
+ 
+Su seviyesi için kullanılan sensörler
+
+🠶 Doğal afetleri önlemek için, su seviyesi izleme sensörleri tarafından toplanan veriler, analitik ve tahmin için sel uyarı sistemlerinde kullanılabilir. Çevre korumanın yanı sıra bu sensör, üretim süreçlerini kontrol etmek ve optimize etmek için çeşitli endüstriyel uygulamalarda kullanım alanı bulur.
+🠶 Hidrostatik basınç sensörü: sıvı dolum seviyesini ölçmek için kullanılır. Bu sensörler, hidrostatik paradoksu kullanan seviye ölçümlerine dayalı olarak çalışır - tank ölçüm noktasında ölçülen hidrostatik basınç, tankın şekli ve hacmi ne olursa olsun, yalnızca sıvı dolumunun yüksekliği ile orantılıdır.
+🠶 Optik sensör: Sıvı ile temas ettikten sonra prizmadaki ışığın kırılmasıyla ima edilen su seviyesini algılayan bir sensör. Optik sensörler, kırılabilen veya basitçe aşınabilen mekanik ve hareketli parçalarla sınırlı olmaları nedeniyle tipik su seviyesi sensörlerine göre belirli bir avantaja sahiptir.
+ 
+Varlık ve Yakınlık Sensörleri
+
+🠶 Bir elektromanyetik radyasyon ışını yayarak, bu tip sensör, hedef nesnenin varlığını algılama ve her ikisini birbirinden ayıran mesafeyi belirleme yeteneğine sahiptir. Yüksek güvenilirlikleri ve uzun ömürleri ile akıllı arabalar, robotik, imalat, makineler, havacılık ve hatta akıllı park çözümleri gibi birçok IoT sektörüne hızla girmelerine şaşmamalı.
+🠶 Doppler radarı: Doppler etkisini, yani kaynağı tarafından gönderilen dalganın frekansı ile bu kaynağa göre hareket eden gözlemci tarafından kaydedilen dalganın frekansı arasındaki farkı kullanan radar. Radar sadece nesneleri tespit etmek ve konumlarını belirlemek için değil, aynı zamanda yön ve hızlarını öğrenmek için de kullanılır.
+🠶 Doluluk sensörü: ofis ve sıhhi tesislerde, koridorlarda, geçitlerde, depolarda vb. hareketi algılamak için kızılötesi ışık veya yüksek frekanslar kullanan bir tür varlık sensörü.
+ 
+Hareket Sensörleri
+
+🠶 Nesnelerin veya canlıların hareketlerinin kızılötesi, ultrasonik, mikrodalga, titreşim yöntemleriyle algılanmasını ve bu algılama sonucunda ilgili mekanizmaların tetiklenmesini sağlayan aktif veya pasif özellikteki sensörlere hareket sensörü denir.
+ 
+Hareket Sensörleri
+
+🠶  Pasif  kızılötesi  sensör  (PIR-Passive  Infrared  veya  Pyroelectric)  ortamdaki sıcaklık değişimini izleyen bir kızılötesi alıcı sensör ile ortam ve nesne arasında hızlı bir sıcaklık değişimi olduğunda hareketi algılar.
+🠶  Aktif  kızılötesi  sensör  (AIR-Active  Infrared)  ise  kızılötesi  alıcı  ve  verici sensörlerle daha uzak mesafe ve daha dar algılama alanlarında verici sensörden yayılan kızılötesi ışının alıcı sensör tarafından alınıp alınmadığını kontrol ederek hareketi algılar.
+🠶 En çok kullanılan hareket algılayıcı olan PIR’dır.
+ 
+Jiroskop Sensörü
+
+🠶 Jiroskop sensörü, sabit bir nesnenin, üç dikey eksende açısal oranlar karşılaştırılarak dönüş yönü ve hızının belirleyen bir sensördür. Algıladığı verileri işlemcisi üzerinde işleyerek elektriksel sinyale çevirir. Jiroskop, yön ölçümü veya ayarlamasında kullanılan, açısal dengenin korunması ilkesiyle çalışır.
+ 
+Kimyasal sensörleri
+
+🠶 Kimyasal bileşikleri (katılar, sıvılar ve gazlar) tespit edebilen sensörler, endüstriyel güvenlik sistemlerinde, çevre koruma çözümlerinde ve oldukça açık bir şekilde bilimsel araştırmalarda vazgeçilmez unsurlardır. Ayrıca, şehirlerin ve eyaletlerin hava ve su kirliliğinin zararlı etkileriyle savaşmasına yardımcı olan nesnelerin interneti destekli hava kalitesi izlemede kullanılmaktadırlar.
+
+🠶 Elektronik burun: Ortamda bulunan farklı türdeki partiküllere veya bunların farklı özelliklerine (belirli kimyasal bağların varlığı, asitlik, alkalilik, komşu dipolleri stabilize etme yeteneği, vb.) vb.). Böyle bir dedektör seti kullanılarak elde edilen bilgiler, ortamın kimyasal bileşimi hakkında bilgi edinmeyi mümkün kılar.
+ 
+Aktüatörler
+
+🠶 Aktüatörler, adından da anlaşılacağı gibi, gömülü oldukları makinelerin veya cihazların doğru çalışmasını sağlamak için yakın çevrelerinde hareket edebilir. Küçük olmalarından doalyı, çalışma sırasında nadiren görünürler, ancak çalışmalarının etkileri araçlarda, endüstriyel makinelerde veya otomasyon teknolojilerini içeren diğer herhangi bir elektronik ekipmanda hissedilebilir.
+ 
+Aktüatörlere Neden İhtiyaç Duyarız?
+
+🠶 Sıcaklık kontrolü
+🠶 Akış kontrolü
+🠶 Basınç kontrolü
+🠶 Seviye kontrolü
+🠶 Diğer (Ph, iletkenlik, Vb.)
+🠶 Kapama
+🠶 Boşaltma
+🠶 Karıştırma
+ 
+Kaynaklar
+
+🠶  Lea, P. (2018). Internet of Things for Architects: Architecting IoT solutions by implementing sensors, communication infrastructure, edge computing, analytics, and security. Packt Publishing Ltd.
+🠶  ÇAKIR, HÜSEYİN; ULUYOL, ÇELEBİ. Nesnelerin İnterneti Kuramdan Uygulamaya. 2021.
+🠶  Tripathy, B. K., & Anuradha, J. (Eds.). (2017). Internet of things (IoT): technologies, applications, challenges and solutions. CRC press.
+🠶 https://www.avsystem.com/blog/iot-sensors-iot-actuators/
+🠶 Dirk, S., Puhlmann, F., Morrish, F., & Bhatnagar, M. Enterprise IoT Strategies & Best Practices for Connected Products & Services.
+🠶 https://tr.wikipedia.org/
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Nesnelerin İnterneti
+4.	Hafta Ders Notları
+Nesnelerin İnterneti (IoT) Cihazlar
+Dr. Öğretim Üyesi Osman ALTAY
+ 
+Arduino Board Çeşitleri
+
+🠶 Kullanılan farklı mikrodenetleyicilere bağlı olarak çeşitli Arduino kartları mevcuttur. Ancak, tüm Arduino kartlarının ortak bir noktası vardır: Arduino IDE aracılığıyla programlanırlar. Farklılıklar, giriş ve çıkış sayısı (tek bir kart üzerinde kullanabileceğiniz sensör, LED ve buton sayısı), hız, çalışma voltajı, form faktörü vb.Bazı kartlar gömülü olacak şekilde tasarlanmıştır ve ayrıca satın almanız gereken programlama arabirimine (donanım) sahip değildir.Bazıları doğrudan 3,7V pille çalışabilir, diğerleri en az 5V'a ihtiyaç duyar.
+ 
+ 
+ 
+Arduino Board
+
+🠶 2. Arduino kartları, Barrel Jack'e (2) bağlanarak doğrudan AC ana güç kaynağından güç alabilir.
+🠶 3. Voltaj regülatörü, Voltaj regülatörünün işlevi, Arduino kartına verilen voltajı kontrol etmek ve işlemci ve diğer elemanlar tarafından kullanılan DC voltajlarını stabilize etmektir.
+🠶 4. Crystal Oscillator, Kristal osilatör, Arduino'nun zaman sorunlarıyla başa çıkmasına yardımcı olur. Arduino zamanı nasıl hesaplar? Cevap, kristal osilatörü kullanmaktır. Arduino kristalinin üzerine basılan sayı 16.000H9H'dir. Bize frekansın 16.000.000 Hertz veya 16 MHz olduğunu söyler.
+🠶 5. Arduino Reset, Arduino kartınızı sıfırlayabilir, yani programınızı baştan başlatabilirsiniz. UNO kartını iki şekilde sıfırlayabilirsiniz. İlk olarak kart üzerindeki  reset  butonunu  (17)  kullanarak.  İkinci  olarak,  RESET  (5)  etiketli Arduino pinine harici bir reset butonu bağlayabilirsiniz.
+ 
+Arduino Board
+
+🠶 6,7,8,9 Pins (3.3, 5, GND, Vin)
+🠶 3.3V (6): Besleme 3.3 çıkış volt
+🠶 5V (7): Besleme 5 çıkış volt
+🠶 Arduino kartı ile kullanılan bileşenlerin çoğu 3.3 volt ve 5 volt ile sorunsuz çalışmaktadır.
+🠶 GND	(8)(Toprak):	Arduino	üzerinde,	devrenizi	topraklamak	için
+kullanılabilecek birkaç GND pini vardır.
+🠶 Vin (9): Bu pin aynı zamanda AC şebeke güç kaynağı gibi harici bir güç kaynağından Arduino kartına güç sağlamak için de kullanılabilir.
+ 
+Arduino Board
+
+🠶 10. Analog pins, Arduino UNO kartında A0'dan A5'e kadar beş analog giriş pini bulunur. Bu pinler, nem sensörü veya sıcaklık sensörü gibi bir analog sensörden gelen sinyali okuyabilir ve mikroişlemci tarafından okunabilen dijital bir değere dönüştürebilir.
+🠶 11. Main microcontroller, Her Arduino kartının kendi mikro denetleyicisi (11) vardır. Bunu tahtanızın beyni olarak kabul edebilirsiniz. Arduino'daki ana IC (entegre devre), karttan karta biraz farklıdır. Mikrodenetleyiciler genellikle ATMEL Company'ye aittir.
+ 
+Arduino Board
+
+🠶 12. ICSP pin, Arduino ICSP pinleri arduino üzerinde bulunan yazılım yüklemek amacı ile konulmuş pinlerdir. Arduino kartına program yüklemenin 2. yöntemidir.
+🠶 13. Power LED indicator, Bu LED, Arduino'nuzu bir güç kaynağına bağladığınızda, kartınızın doğru şekilde açıldığını belirtmek için yanmalıdır. Bu ışık yanmıyorsa, bağlantıda bir sorun var demektir.
+🠶 14. TX and RX LEDs, TX (gönderme) ve RX (alma). Arduino UNO kartında iki yerde görünürler. İlk olarak, 0 ve 1 numaralı dijital pinlerde, seri iletişimden sorumlu pinleri belirtmek için. İkincisi, TX ve RX led (13). Seri veri gönderirken TX ledi farklı hızda yanıp söner. Yanıp sönme hızı, kart tarafından kullanılan baud hızına bağlıdır. Alma işlemi sırasında RX yanıp söner.
+ 
+Arduino Board
+
+🠶 15. Digital I / O, Arduino UNO kartı 14 adet dijital I/O pinine (15) sahiptir (6 tanesi PWM (Pulse Width Modulation) çıkışı sağlar.Bu pinler mantık değerlerini (0 veya 1) okumak için giriş dijital pinleri olarak veya dijital olarak çalışacak şekilde konfigüre edilebilir.
+🠶 16. AREF, Analog Referans anlamına gelir. Bazen, analog giriş pinleri için üst limit olarak harici bir referans voltajı (0 ile 5 Volt arasında) ayarlamak için kullanılır.
+ 
+Arduino Kart Çeşitleri
+
+🠶 Arduino Uno (R3): Uno modeli ilk arduino seçimi için harika bir seçim olacaktır. Başlamanız için her şeye sahip bir modeldir. 14 dijital giriş/çıkış pinine (6 tanesi PWM çıkışı olarak kullanılabilir), 6 analog girişe, bir USB bağlantısına, bir reset butonuna ve daha fazlasına sahiptir. Başlayabilmek için USB kablosu ile bilgisayara bağlamanız yeterli olacaktır.
+
+🠶 LilyPad Arduino: By arduino kartı giyilebilir bir e-tekstil teknolojisidir. LilyPad giysilere dikilebilmelkerine imkan tanıyan düz bir sırt ile yaratıcı şekilde tasarlanan bir arduino türüdür. E-tekstil için özel olarak tasarlanmış ve üretilmiş, kendi giriş çıkış, güç ve sensör kartlarına sahiptir.
+ 
+Arduino Kart Çeşitleri
+
+🠶 RedBoard: Bu arduino türünde IDE kullanılarak bir USB mini b kablosu ile programlanmaktadır. Daha kararlı ve ve ayrıca arka tarafı tamamen düz olduğu için projeler için yerleştirilmesi kolay olmaktadır. RedBoard’u USB üzerinden veya yuvarlak jak üzerinden çalıştırabilirsiniz.
+🠶 Arduino Mega (R3): Arduino uno ile benzerlikler göstermektedir. Toplam 54 adet giriş/çıkış pimi bulunmaktadır. 16 adet analog girişi, bir adet usb bağlantısı, bir güç girişi ve aynı zamanda bir de reset düğmesi bulunmaktadır. Mikrodenetleyiciyi desteklemek için herşeyi içermektedir.
+Başlamak için USB kablosu ile bilgisayara bağlamanız yeterli olacaktır. Çok sayıda pime sahip olması nedeniyle birçok dijital giriş ve çıkış gerektiren projeler için kullanışlı olacaktır.
+ 
+Arduino Kart Çeşitleri
+
+🠶 Arduino Leonardo: Leonardo USB’li mikrodenetleyici kullanan ilk arduino geliştirme kartıdır. Toplam 20 adet giriş çıkış pini bulunmaktadır. Bu pinlerden 7 tanesini PWM çıkışı ve 12 tanesini ise analog giriş olarak kullanabilirsiniz.
+ 
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+ESP8266
+
+🠶 ESP8266 modülü internete bağlanmak için uygun bir yoldur. Ayrıca ev otomasyonu ya da WiFi uzaktan sensör projesini gerçekleştirmenizi sağlar. Bu modül VCC ve 3V lojik besleme için 3V enerji kaynağı gerekmektedir. Tolerans voltajı 5V değildir. Arduino üzerinden RX ve TX 5V bağlamak modüle zarar verecektir. Bir lojik seviye dönüştürücüsü ya da 3V bir Arduino kullanmalıdır. Arduino Uno üzerinde bulunan 3V kaynağı bu modül için yetersiz akım çıkışına sahiptir. Ayrı bir yüksek akım (300mA veya daha yüksek) kaynağı bağlanılması gerekmektedir.
+ 
+Raspberry PI
+
+🠶 Raspberry Pi, Raspberry Pi Vakfı tarafından Birleşik Krallık'ta geliştirilen ve okullarda ve gelişmekte olan ülkelerde temel bilgisayar bilimlerinin öğretilmesini teşvik etmek için geliştirilen küçük bir tek kartlı bilgisayar serisidir. Herhangi bir monitöre takılır ve klavye, fare ve hoparlörler takabilirsiniz. Raspberry Pi, web'de gezinmek, belge ve elektronik tablo oluşturmak, oyun oynamak, video izlemek ve daha pek çok şey için kullanılabilir. Ayrıca, programlama ve dijital yapım öğrenimi için mükemmel bir ortam sağlar. Raspberry Pi’nin GPIO (genel amaçlı giriş / çıkış) pinlerine çeşitli donanımlar bağlayabilir ve elektronik bileşenleri kullanarak programlamayı öğrenebilirsiniz. Raspberry Pi ayrıca nesnelerin interneti projeleri veya ev otomasyonu çözümleri gibi özel projelere de dahil edilebilir.
+ 
+
+ 
+ 
+Raspberry PI
+
+🠶 USB bağlantı noktaları - bunlar bir fare ve klavyeyi bağlamak için kullanılır.
+Ayrıca USB sürücü gibi diğer bileşenleri de bağlayabilirsiniz.
+🠶  SD kart yuvası - SD kartı buraya yerleştirebilirsiniz. İşletim sistemi yazılımının ve
+dosyalarınızın depolandığı yerdir.
+🠶 Ethernet portu – Bu parça, Raspberry Pi'yi kabloyla bir ağa bağlamak için kullanılır. Raspberry Pi ayrıca kablosuz ağ üzerinden de bir ağa bağlanabilir.
+🠶 Ses girişi - kulaklıkları veya hoparlörleri buraya bağlayabilirsiniz.
+ 
+Raspberry PI
+
+🠶 HDMI bağlantı noktası – Bu parça, Raspberry Pi'nin görsel çıktılarını görüntülemek için kullandığınız monitörü (veya projektörü) bağladığınız yerdir. Monitörünüzün hoparlörleri varsa, ses de gelmektedir.
+🠶 Mikro USB güç konektörü – Burası, güç kaynağını bağladığınız yerdir. Burayı daima, diğer tüm bileşenlerinizi bağladıktan sonra bağlamanız gerekir.
+🠶  GPIO  portları  —  Bunlar,  LED'ler  ve  düğmeler  gibi  elektronik  bileşenleri Raspberry Pi'ye bağlamanıza olanak sağlar.
+ 
+Arduino Code
+
+🠶 Function – Bir adı olan ve programda başka bir yerden yürütülebilen mantıksal bir kod bloğu. İşlev bir şey yapabilir veya bir şey döndürebilir. (Daha fazla bilgi)
+🠶 Return – Bir işlev bir şey döndürürse, bir değer verir.
+🠶  Return Type – İşlevin ne tür bir değişken döndürdüğünü tanımlar. Hiçbir şey döndürmezse, “void” koyarsınız.İşlev
+🠶 Function Name – Her işlevin benzersiz bir ada ihtiyacı vardır. İsim camelCase
+içinde olmalıdır (yani “My Function”, “myFunction” olarak yazılmalıdır).
+🠶 Arguments – Bazen bir programa bilgi göndermek faydalıdır. Bu argümanlar olarak yapılabilir.
+ 
+Arduino Code
+
+🠶 Comments
+🠶 /*
+🠶 Bu bir yorum bloğudur.Başlangıç ve bitiş sembolleri arasındaki her şey
+derleyici tarafından yok sayılır.
+🠶 */
+🠶 // Bu bir satır içi yorumdur.
+ 
+Arduino Code
+
+🠶 Variables
+🠶 int myNum; // myNum adında bir tamsayı bildirir
+🠶 myNum= 13; // myNum adlı tamsayıyı 13'e eşitler
+🠶 int myNum= 13; // aynı anda myNum adında bir tamsayı bildirir ve onu 13'e eşitler
+
+🠶 float myDec; // myDec adında bir ondalık sayı bildirir
+🠶 myDec = 13.001; // myDecequal adlı ondalık sayıyı 13.001 olarak ayarlar
+🠶 float myDec= 13; // aynı anda myDecand adında bir ondalık sayı bildirir,
+onu 13'e eşitler
+ 
+Arduino Code
+
+🠶 char theChar; // theChar adında bir karakter bildirir
+🠶 theChar = 'a'; // Char adlı karakteri 'a' harfine eşitler.
+🠶 char theChar = 'c'; // aynı anda myNum adlı bir karakter bildirir ve onu 'a'
+harfine eşitler.
+
+🠶 String dizesi; // someWord adında bir String bildirir
+🠶 SomeWord = "Merhaba Scott"; // SomeWord adlı Dizeyi "Merhaba Scott"a eşit olarak ayarlar. String bazıWord = “Güle güle Scott!”; // aynı anda SomeWord adında bir String bildirir ve onu “Goodbye Scott!”a eşitler.
+ 
+Arduino Code
+
+🠶 int yaş = /* bazı kullanıcı girdileri*/;
+🠶 if( koşul_1 ) {
+🠶 // koşul_1 doğruysa, burada bazı şeyler yapın ve diğer tüm yan tümceleri
+atlayın
+🠶 } else if( koşul_2 ) {
+🠶 // koşul_1 yanlış ancak koşul_2 doğruysa, burada bazı şeyler yapın ve son
+else yan tümcesini atlayın
+🠶 } else {
+🠶 // koşul_1 ve koşul_2 yanlışsa, burada bir şeyler yapın
+🠶 }
+ 
+Arduino Code
+
+🠶 int i = 0;
+🠶 while(i&lt;10) {
+🠶 Serial.print("I am on # ");
+🠶 Serial.println(i);
+🠶 i = i+1;
+🠶 }
+ 
+Arduino Code Examples
+ 
+
+
+
+
+
+
+
+
+
+
+Nesnelerin İnterneti
+5.	, 6. ve 7. Hafta Ders Notları
+Nesnelerin İnterneti (IoT) Verilerinin Analizi İçin Veri Madenciliği Teknikleri
+Dr. Öğretim Üyesi Osman ALTAY
+ 
+Veri Madenciliği
+
+🠶 Büyük boyutlardaki anlamsız verilerin içerisinden algoritmalar ve belirli kuralları kullanarak, önceden tahmin edilemeyen ancak kullanım olarak faydalı bilgilerin ortaya çıkarabilmesi için verileri analiz etme ve inceleme sürecine veri madenciliği denilmektedir.
+🠶 Veri madenciliği (Data Mining), özellikle elektronik ticaret, bilim, tıp, iş ve eğitim alanlarındaki uygulamalara temel oluşturabilecek bir araştırma sahası olarak ortaya çıkmıştır.
+🠶 Veri madenciliği genel olarak elde edilen anlamsız bilgilerden, veri madenciliği yöntemleri kullanılarak anlamlı ve faydalı yeni bilgileri elde etme işlemidir.
+ 
+Bilginin Keşfi
+
+🠶 Veri	madenciliği	bilgi	keşfi	sürecinin	içerisinde	yer	almaktadır.	Veri madenciliği işlemi yapılırken uygulanan adımlar.
+🠶 Veri Temizlenmesi: Elde edilen veritabanı içerisindeki verilerden anlamsız
+olanların çıkarılması.
+🠶 Veri Entegrasyonu: Farklı verilerin anlamlı bir şekilde birleştirilmesi.
+🠶 Veri	Seçimi: Anlamlı verilerin	elde edilmesi için  kullanılacak verilerin
+belirlenmesi.
+🠶 Veri Transferi: Veri madenciliği uygulanacak verilerin, kullanılacak olan veri madenciliği algoritması için uygun hale getirilmesi.
+ 
+Bilginin Keşfi
+
+🠶 Veri Madenciliği: Veri madenciliği için uygun hale getirilmiş veritabanına, veri madenciliği algoritmasının uygulanması
+🠶 Veri Değerlendirmesi: Kullanılan algoritma sonucunda elde edilen örüntü
+içerisinde farklı örüntülerin tespit edilmesi.
+🠶 Veri Sunumu: Veri madenciliği sonucunda elde edilmiş yeni bilgilerin kullanıcıya sunulması.
+ 
+Bilginin Keşfi
+ 
+ 
+ 
+Problemin Belirlenmesi
+
+🠶 Veri Madenciliği çalışmalarında başarılı olmanın ilk şartı, uygulamanın hangi işletme amacı için yapılacağının açık bir şekilde tanımlanmasıdır.
+🠶 Sorgulama, denklem ilişkisi ya da basit istatistik yöntemler veri madenciliği
+değildir.
+🠶 Bulunan bilgi
+🠶 gizli,
+🠶 önemli,
+🠶 önceden bilinmeyen,
+🠶 yararlı olmalı.
+ 
+Yöntemler için verilerin uygun hale getirilmesi
+🠶 En fazla hata yapılan adımdır.
+🠶 En fazla zaman alan adımdır.
+🠶 En zor adım olarak görülebilir.
+🠶 Verilerin	elde	edilmesi,	değerlendirilmesi,	birleştirilmesi,	temizlenmesi, seçilmesi ve dönüştürülmesi gibi işlemler yapılır.
+ 
+Veri madenciliği
+
+🠶 Modelin tasarlanması adımıdır.
+🠶 Modelin tasarlanması aşaması, sıfır hata ile istenilene ulaşana kadar devam
+edilir.
+🠶 Farklı modellerin denenmesi gerekmektedir. Veriye göre yöntemlerin başarısı değişmektedir.
+🠶 Denetimli veya denetimsiz öğrenme gibi yaklaşımlara göre modeller
+değişiklik göstermektedir.
+ 
+Sonuçların değerlendirilmesi
+
+🠶 Kullanılan modelin değerlendirilmesi için gerekli değerlendirme metrikleri değerlendirilmektedir.
+🠶 Fakat tek bir metrik genellikle yeterli değildir.
+🠶 Elde edilen değerlerin uzman tarafından görülmesi gerekmektedir. Yani sonuçların anlamlı mı anlamsız olduğu veya elde edilen başarının düşük dahi olsa pratikte faydalı olup olamayacağı gibi.
+ 
+Elde edilen değerli bilgi
+
+🠶 Bilgiyi elde etmek kadar, elde edilen yeni bilgilerin anlatımı yani kullanıcıya sunumu da önemlidir.
+ 
+Veri Kümeleri
+
+🠶 Nominal: Nominal, “isimlerle ilgili” anlamına gelir. Nominal bir özelliğin değerleri, nesnelerin sembolleri veya isimleridir. Her değer bir tür kategori, kod veya durumu temsil eder ve bu nedenle nominal niteliklere kategorik olarak da atıfta bulunulur. Değerlerin anlamlı bir sırası yoktur. Bilgisayar biliminde değerler numaralandırma olarak da bilinir.
+🠶 Binary: İkili öznitelik, yalnızca iki kategoriye veya duruma sahip nominal bir özniteliktir: 0 veya 1, burada 0 tipik olarak özniteliğin olmadığı ve 1'in mevcut olduğu anlamına gelir. İki durum doğru ve yanlışa karşılık geliyorsa, ikili niteliklere Boolean denir.
+🠶 Ordinal: Sıralı nitelik, aralarında anlamlı bir sıraya veya sıralamaya sahip olası değerlere sahip bir niteliktir, ancak ardışık değerler arasındaki büyüklüğü bilinmemektedir.
+🠶   Numeric: Sayısal bir nitelik niceldir; yani tamsayı veya gerçek değerlerle temsil edilen ölçülebilir bir niceliktir. Sayısal nitelikler, aralık ölçekli veya oran ölçekli olabilir.
+ 
+Veri Madenciliğinde Karşılaşılan Problemler
+🠶 Verilerin boyut olarak fazla olması
+🠶 Bazı değerlerin anlamsız olması
+🠶 Bazı değerlerin boş olması
+🠶 Bazı özelliklerin eksik olması
+🠶 Artık Veri
+🠶 Dinamik Veri
+ 
+Veri Ön Hazırlama İşlemleri
+
+🠶 Veriler, amaçlanan kullanımın gerekliliklerini karşılıyorsa kaliteye sahiptir. Doğruluk (accuracy), tamlık (completeness), tutarlılık (consistency), zamanlılık (timeliness), inanılırlık (believability) ve yorumlanabilirlik (interpretability) dahil olmak üzere veri kalitesini oluşturan birçok faktör vardır.
+ 
+Veri Ön Hazırlama İşlemleri
+
+🠶 Verilerin tam olmamasının nedenleri:
+🠶 Verilere erişilememesi
+🠶 Verilere, toplandığı ve çözümlendiği zaman dilimlerinde farklı
+yanaşmalar(bazı verilerin değerini önemsememe)
+🠶 insan/donanım/yazılım sorunları
+🠶 Gürültülü (düzgün olmayan) verilerin nedenleri
+🠶 Veri toplama araçlarında hatalar
+🠶 Veri girişinde insan veya bilgisayar hatası
+🠶 Veri aktarımında hatalar
+ 
+Veri Ön Hazırlama İşlemleri
+
+🠶 Tutarsız verilerin nedenleri
+🠶 Farklı veri kaynakları
+🠶 İşlevsel bağlılıklarda yanlışlar (bağımlı değişkenlerin değerlerinin doğru
+hesaplanmaması)
+ 
+Veri Temizleme (Data cleaning)
+
+🠶 Mutlaka uygulanması ve kontrol edilmesi gereken adımdır.
+🠶 Örneği tamamen yok saymak.
+🠶 Eksik değerleri manuel doldurmak.
+🠶 Eksik değere global bir değişken atamak.
+🠶 Ortalama ya da medyan gibi merkezi eğilim ölçüsü kullanarak doldurmak.
+🠶 Kendi sınıfı varsa kendi sınıfında ortalama veya medyan kullanmak.
+🠶 Kullanılabilecek en olası değeri kullanmak.
+ 
+Veri Temizleme (Data cleaning)
+
+🠶 Veri eksikliğinin nedenleri:
+🠶 Donanım hatası,
+🠶 Diğer kaydedilmiş verilerle tutarsızlık ve bu nedenle silinmesi,
+🠶 Doğru anlaşılmadığı için veri girilmemesi
+🠶 Veri girişi sürecinde bazı veriler önemsiz sayılarak girilmemesi,
+🠶 Verinin oluşma veya değişme tarihi yok olması gibi nedenler olabilir.
+ 
+Gürültülü veri
+
+🠶 Gürültü nedir?” Gürültü, ölçülen bir değişkendeki rastgele bir hata veya varyanstır.
+🠶 Binning: Binning yöntemleri, “komşuluğuna”, yani etrafındaki değerlere danışarak
+sıralanmış bir veri değerini düzeltir.
+🠶 Regresyon: Veri yumuşatma, veri değerlerini bir fonksiyona uygun hale getiren bir teknik olan regresyon ile de yapılabilir.
+🠶 Aykırı değer analizi: Aykırı değerler, örneğin benzer değerlerin gruplar veya "kümeler" halinde düzenlendiği durumlarda kümeleme yoluyla tespit edilebilir. Sezgisel olarak, küme kümesinin dışında kalan değerler aykırı değerler olarak kabul edilebilir
+ 
+Veri entegrasyonu
+
+🠶 Veri madenciliği, genellikle veri entegrasyonunu, yani birden çok veri deposundan gelen verilerin birleştirilmesini gerektirir. Dikkatli entegrasyon, sonuçta ortaya çıkan veri setindeki fazlalıkları ve tutarsızlıkları azaltmaya ve bunlardan kaçınmaya yardımcı olabilir. Bu, sonraki veri madenciliği sürecinin doğruluğunu ve hızını artırmaya yardımcı olabilir. Verilerin anlamsal heterojenliği ve yapısı, veri entegrasyonunda büyük zorluklar yaratır.
+ 
+Veri indirgeme
+
+🠶 Veri madenciliği uygulamalarında bazen çözümleme işlemi uzun süre alabilir. Eğer çözümlemeden elde edilecek sonucun değişmeyeceğine inanılıyorsa veri sayısı ya da değişkenlerin sayısı azaltılabilir.
+🠶 Veri birleştirme
+
+🠶 Boyut indirgeme
+
+🠶 Veri sıkıştırma
+
+🠶 Örnekleme
+
+🠶 Genelleme
+ 
+Özellik seçimi (Feature selection)
+
+🠶 Özellik seçimi, belirli bir kritere göre en uygun özellik alt kümesini seçen bir süreçtir.
+🠶 Neden ihtiyacımız var:
+🠶 1. performansı artırmak (hız, tahmin gücü, modelin basitliği açısından).
+🠶 2. Model seçimi için verileri görselleştirmek.
+🠶 3. Boyutluluğu azaltmak ve gürültüyü ortadan kaldırmak için.
+ 
+Özellik seçimi (Feature selection)
+
+🠶 Özellik seçimi ile boyut indirgeme farklı kavramlardır. Özellik seçiminde hangi özelliklerin modelin eğitim ve test sürecine dahil olacağına karar verilirken boyut indirgeme de bu özellikler farklı biçimlerde modelde yer almaktadır.
+ 
+Özellik seçimi (Feature selection)
+
+🠶 FS gerçekleştirme nedenleri şunları içerebilir:
+🠶 Alakasız verilerin kaldırılması.
+🠶 Öğrenilen modellerin tahmin doğruluğunun arttırılması.
+🠶 Veri maliyetini azaltmak.
+🠶 Depolama gereksinimlerini ve hesaplama maliyetini azaltmak gibi öğrenme verimliliğini artırmak.
+🠶 Ortaya çıkan model karmaşıklığını azaltmak, veri ve modelin anlaşılmasını geliştirmek.
+ 
+Birliktelik Analizi
+
+🠶 Olayların birlikte gerçekleşme durumlarını çözümleyen veri madenciliği yöntemlerine Birliktelik Kuralları denir.
+🠶 Veri madenciliğinde kullanılan ilk tekniklerden birisi de birliktelik kurallarıdır.
+🠶 Birliktelik kuralı, geçmiş verilerin analiz edilerek bu veriler içindeki birliktelik davranışlarının tespiti ile geleceğe yönelik çalışmalar yapılmasını
+destekleyen bir yaklaşımdır.
+🠶 A’yı yapanların yüzde 35’i B’yi de yapar.
+ 
+Birliktelik Analizi
+
+🠶  Birliktelik kuralları analizi problemi ilk olarak Agrawal, Imielinski ve Swami
+tarafından 1993 yılında ele alınmış olup ve veri madenciliğinde kullanılan ilk tekniklerden birisidir (Agrawal vd., 1993).
+🠶 Birliktelik kuralı uygulamasına pazar sepeti analizi örnek verilebilir (Frawley vd., 1991).
+ 
+Birliktelik Analizi
+
+🠶	Birliktelik kuralı madenciliğinin uygulamasına Pazar sepeti analizi örnek verilebilir (Birliktelik kurallarının kullanıldığı en tipik örnek market sepeti uygulamasıdır.)
+🠶	Bu işlem, müşterilerin yaptıkları alışverişlerdeki ürünler arasındaki birliktelikleri
+bularak müşterilerin satın alma alışkanlıklarını analiz eder.
+🠶		Bu tip birlikteliklerin keşfedilmesi, müşterilerin hangi ürünleri bir arada aldıkları bilgisini ortaya çıkarır ve market yöneticileri de bu bilgi ışığında daha etkin satış stratejileri geliştirebilirler.
+🠶	Örneğin bir müşteri makarna satın alıyorsa, aynı alışverişte makarnanın
+yanında ketçap alma olasılığı nedir?
+🠶		Bu tip bir bilgi ışığında rafları düzenleyen market yöneticileri ürünlerindeki satış oranını arttırabilirler. Örneğin bir marketin müşterilerinin makarna ile birlikte
+ketçap satın alma oranı yüksekse, market yöneticileri sosis ile ketçap raflarını yan yana koyarak ketçap satışlarını arttırabilirler.
+ 
+Sınıflandırma
+
+🠶 Bir banka kredisi memuru, hangi kredi başvuru sahiplerinin banka için "güvenli" ve hangilerinin "riskli" olduğunu öğrenmek için verilerinin analizine ihtiyaç duyar.
+🠶 AllElectronics'teki bir pazarlama müdürü, belirli bir profile sahip bir müşterinin yeni bir bilgisayar satın alıp almayacağını tahmin etmeye yardımcı olması için veri analizine ihtiyaç duyar.
+🠶 Bir tıp araştırmacısı, bir hastanın üç özel tedaviden hangisini alması
+gerektiğini tahmin etmek için meme kanseri verilerini analiz etmek istiyor.
+ 
+Sınıflandırma
+
+🠶 Bu örneklerin her birinde, veri analizi görevi sınıflandırmadır; burada kredi başvuru verileri için "güvenli" veya "riskli" gibi sınıf (kategorik) etiketlerini tahmin etmek için bir model veya sınıflandırıcı oluşturulur; pazarlama verileri için "evet" veya "hayır"; veya tıbbi veriler için "tedavi A", "tedavi B" veya "tedavi C". Bu kategoriler, değerler arasındaki sıralamanın hiçbir anlamı olmadığı ayrık değerlerle temsil edilebilir. Örneğin, 1, 2 ve 3 değerleri, bu tedavi rejimleri grubu arasında herhangi bir sıralamanın ima edilmediği durumlarda A, B ve C tedavilerini temsil etmek için kullanılabilir. Pazarlama müdürünün, belirli bir müşterinin AllElectronics'teki bir satış sırasında ne kadar harcayacağını tahmin etmek istediğini varsayalım. Bu veri analizi görevi, oluşturulan modelin bir sınıf etiketinin aksine sürekli değerli bir işlevi veya sıralı değeri öngördüğü bir sayısal tahmin örneğidir. Bu model bir tahmin edicidir.
+ 
+Sınıflandırma
+
+🠶 Regresyon analizi, sayısal tahmin için en sık kullanılan istatistiksel bir metodolojidir; bu nedenle, sayısal tahmin için başka yöntemler mevcut olmasına rağmen, iki terim eşanlamlı olarak kullanılma eğilimindedir. Sınıflandırma ve sayısal tahmin, iki ana tahmin problemi türüdür.
+ 
+Sınıflandırma
+
+Sınıflamanın temel kuralları:
+🠶 Öğrenme eğiticilidir
+🠶 Veri setinde bulunan her örneğin bir dizi niteliği vardır ve bu niteliklerden biri
+de sınıf bilgisidir.
+🠶 Hangi sınıfa ait olduğu bilinen nesneler (öğrenme kümesi - training set) ile bir model oluşturulur
+🠶 Oluşturulan model öğrenme kümesinde yer almayan nesneler (deneme
+kümesi - test set) ile denenerek başarısı ölçülür.
+ 
+Sınıflandırma Adımları
+
+🠶 Sınıflandırma işlemi üç aşamadan oluşur:
+1.	Model oluşturma
+2.	Model değerlendirme
+3.	Modeli kullanma
+ 
+Sınıflandırma
+
+🠶	Doğru sınıflandırma başarısı
+🠶	Hız
+🠶	modeli oluşturmak için gerekli süre
+🠶	sınıflandırma yapmak için gerekli süre
+🠶	Kararlı olması
+🠶	veri kümesinde gürültülü ve eksik nitelik değerleri olduğu durumlarda da iyi sonuç vermesi
+🠶	Ölçeklenebilirlik
+🠶	büyük miktarda veri kümesi ile çalışabilmesi
+🠶	Anlaşılabilir olması
+🠶	kullanıcı tarafından yorumlanabilir olması
+🠶	Kuralların yapısı
+🠶	birbiriyle örtüşmeyen kurallar
+ 
+Sınıflandırma Algoritmaları
+
+🠶 Naïve Bayes.
+🠶 K-Nearest Neighbours.
+🠶 Linear Discriminant Analysis
+🠶 Logistic Regression.
+🠶 Decision Tree.
+🠶 Random Forest.
+🠶 Support Vector Machine.
+🠶 Artificial Neural Networks
+ 
+Karar Ağaçları
+
+🠶 Karar ağacı indüksiyonu, sınıf etiketli eğitim demetlerinden karar ağaçlarının öğrenilmesidir. Karar ağacı, her bir iç düğümün (yaprak olmayan düğüm) bir öznitelik üzerinde bir testi ifade ettiği, her dalın testin bir sonucunu temsil ettiği ve her yaprak düğümün (veya uç düğümün) bir sınıf etiketi taşıdığı akış şeması benzeri bir ağaç yapısıdır. Bir ağaçtaki en üstteki düğüm kök düğümdür.
+ 
+Karar Ağaçları
+
+🠶 Bilgisayar satın alma kavramını temsil eder, yani AllElectronics'teki bir müşterinin bilgisayar satın alma olasılığının olup olmadığını tahmin eder. İç düğümler dikdörtgenlerle, yaprak düğümler ovallerle gösterilir. Bazı karar ağacı algoritmaları yalnızca ikili ağaçlar üretir (her bir dahili düğümün tam olarak iki diğer düğüme dallandığı), diğerleri ise ikili olmayan ağaçlar üretebilir.
+ 
+Karar Ağaçları
+
+🠶 “Sınıflandırma için karar ağaçları nasıl kullanılır?” İlişkili sınıf etiketinin bilinmediği bir tanımlama grubu (X) verildiğinde, tanımlama grubunun öznitelik değerleri karar ağacına karşı test edilir. Kökten bir yaprak düğüme kadar bir yol izlenir ve bu demet için sınıf tahminini tutar. Karar ağaçları kolaylıkla sınıflandırma kurallarına dönüştürülebilir. "Karar ağacı sınıflandırıcıları neden bu kadar popüler?" Karar ağacı sınıflandırıcılarının oluşturulması, herhangi bir alan bilgisi veya parametre ayarı gerektirmez ve bu nedenle keşifsel bilgi keşfi için uygundur. Karar ağaçları çok boyutlu verileri işleyebilir. Edinilen bilgiyi ağaç biçiminde temsil etmeleri sezgiseldir ve genellikle insanlar tarafından özümsenmesi kolaydır.
+ 
+Karar Ağaçları
+
+🠶 Karar ağacı tümevarımının öğrenme ve sınıflandırma adımları basit ve hızlıdır. Genel olarak, karar ağacı sınıflandırıcıları iyi bir doğruluğa sahiptir. Ancak, başarılı kullanım eldeki verilere bağlı olabilir. Karar ağacı tümevarım algoritmaları, tıp, imalat ve üretim, finansal analiz, astronomi ve moleküler biyoloji gibi birçok uygulama alanında sınıflandırma için kullanılmıştır.
+ 
+Karar Ağaçları
+
+🠶 1970'lerin sonlarında ve 1980'lerin başlarında, makine öğrenimi araştırmacısı
+J. Ross Quinlan, ID3 (Yinelemeli Dichotomiser) olarak bilinen bir karar ağacı algoritması geliştirdi. Bu çalışma, E. B. Hunt, J. Marin ve P. T. Stone tarafından tanımlanan kavram öğrenme sistemleri üzerine daha önceki çalışmaları genişletti. Quinlan daha sonra, daha yeni denetimli öğrenme algoritmalarının sıklıkla karşılaştırıldığı bir ölçüt haline gelen C4.5'i (ID3'ün halefi) sundu. 1984 yılında, bir grup istatistikçi (L. Breiman, J. Friedman, R. Olshen ve C. Stone), ikili karar ağaçlarının oluşumunu tanımlayan Sınıflandırma ve Regresyon Ağaçları (CART) kitabını yayınladı.
+ 
+Karar Ağaçları
+
+🠶 ID3 ve CART, birbirinden bağımsız olarak aynı anda icat edildi, ancak eğitim gruplarından karar ağaçlarını öğrenmek için benzer bir yaklaşım izledi. Bu iki köşe taşı algoritması, karar ağacı tümevarımı üzerinde bir çalışma telaşı yarattı. ID3, C4.5 ve CART, karar ağaçlarının yukarıdan aşağıya özyinelemeli böl ve yönet tarzında oluşturulduğu açgözlü (yani geri izlemesiz) bir yaklaşım benimser. Karar ağacı tümevarımı için çoğu algoritma, bir eğitim grubu ve bunlarla ilişkili sınıf etiketleriyle başlayan yukarıdan aşağıya bir yaklaşımı da takip eder. Ağaç oluşturulurken eğitim seti özyinelemeli olarak daha küçük alt kümelere bölünür.
+ 
+Karar Ağaçları
+
+🠶 Yaygın kullanılan öngörü yöntemlerinden bir tanesidir
+🠶 Ağaçtaki her düğüm bir özellikteki testi gösterir.
+🠶 Düğüm dalları testin sonucunu belirtir.
+🠶 Ağaç yaprakları sınıf etiketlerini içerir.
+ 
+Karar Ağaçları
+
+
+
+
+
+
+
+
+
+
+
+🠶 Başlangıçta bütün öğrenme örnekleri kök düğümdedir.
+🠶 Örnekler seçilmiş özelliklere tekrarlamalı olarak bölünür.
+🠶 Ağaç Temizleme (Tree pruning)
+🠶	Gürültü ve istisna kararları içeren dallar belirlenir ve kaldırılır.
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+Karar Ağaçları
+
+🠶 Karar	ağaçlarında en önemli aşamalarından birisi düğüm noktalarına ait kriterlerin belirlenmesidir.
+🠶 Her düğüm noktası için bir karar ağacı algoritması tasarlanır.
+🠶 Algoritmalar gruplanırsa ;
+🠶 Entropiye dayalı algoritmalar (ID3, C4.5)
+🠶 Sınıflandırma ve regresyon ağaçları (Twoing, Gini)
+ 
+Karar Ağaçlarının Avantajları
+
+🠶  Anlaması ve yorumlaması kolaydır. Kullanılan ağaç yapılar görselleştirilebilir.
+🠶 Az oranda bir veri hazırlığına ihtiyaç duyar. Fakat unutulmamalıdır ki bu
+model kayıp değerleri desteklememektedir.
+🠶 Kullanılan ağacın maliyeti, ağacı eğitmek için kullanılan veri noktalarının sayısıyla logaritmiktir.
+🠶 Hem sayısal hem de kategorik verileri işleyebilir.
+🠶 Çok çıktılı problemleri ele alabilmektedirler.
+🠶  İstatistiksel testler kullanılarak bir modelin doğrulanması mümkündür.
+🠶 Karar ağaçları, parametrik olmayan bir yöntem olarak düşünülebilir. Yani
+uzay dağılımı ve sınıflandırma yapısı hakkında bir yaklaşıma sahip değillerdir.
+ 
+Karar Ağaçlarının Dezavantajları
+
+🠶 Kararsızdırlar, yani verilerdeki küçük bir değişikliğin, en iyi durumdaki karar ağacının yapısında büyük bir değişikliğe yol açabileceği anlamına gelmektedir.
+🠶 Genellikle hatalıdırlar. Diğer birçok tahmin algoritmaları benzer verilerle daha iyi performans gösterir. Bu, tek bir karar ağacını rastgele orman ile değiştirerek düzeltilebilir, ancak rastgele ormanın tek bir karar ağacı kadar yorumlanması kolay değildir.
+🠶 Farklı sayıda seviyeye sahip kategorik değişkenler içeren veriler için, karar ağaçlarındaki bilgi kazanımı, daha fazla seviyeye sahip öznitelikler lehine önyargılıdır.
+🠶 Hesaplamalar çok karmaşık hale gelebilir, özellikle de birçok değer belirsizse
+veya birçok sonuç ile bağlantılıysa.
+ 
+Küme Analizi
+
+🠶 Küme analizi veya basitçe kümeleme, bir dizi veri nesnesini (veya gözlemi) alt kümelere ayırma işlemidir. Her alt küme bir kümedir, öyle ki bir kümedeki nesneler birbirine benzer, ancak diğer kümelerdeki nesnelere benzemez. Bir küme analizinden elde edilen kümeler kümesine kümeleme denilebilir. Bu bağlamda farklı kümeleme yöntemleri aynı veri seti üzerinde farklı kümelemeler üretebilir. Bölümleme, insanlar tarafından değil, kümeleme algoritması tarafından gerçekleştirilir. Bu nedenle, kümeleme, veriler içinde önceden bilinmeyen grupların keşfedilmesine yol açabilmesi açısından yararlıdır.
+ 
+Küme Analizi
+
+🠶 Küme analizi, iş zekası, görüntü örüntü tanıma, Web araması, biyoloji ve güvenlik gibi birçok uygulamada yaygın olarak kullanılmaktadır. İş zekasında kümeleme, çok sayıda müşteriyi, bir grup içindeki müşterilerin güçlü benzer özellikleri paylaştığı gruplar halinde organize etmek için kullanılabilir. Bu, gelişmiş müşteri ilişkileri yönetimi için iş stratejilerinin geliştirilmesini kolaylaştırır. Ayrıca çok sayıda projesi olan bir danışman firma düşünün. Proje yönetimini iyileştirmek için, projeleri benzerliğe dayalı olarak kategorilere ayırmak için kümeleme uygulanabilir, böylece proje denetimi ve teşhisi (proje teslimini ve sonuçlarını iyileştirmek için) etkin bir şekilde yürütülebilir.
+ 
+Küme Analizi
+
+🠶 Görüntü tanımada, kümeleme, el yazısı karakter tanıma sistemlerinde kümeleri veya "alt sınıfları" keşfetmek için kullanılabilir. Her basamağın 1, 2, 3, vb. olarak etiketlendiği, elle yazılmış rakamlardan oluşan bir veri setimiz olduğunu  varsayalım.  İnsanların  aynı  basamağı  yazma  biçiminde  büyük farklılıklar olabileceğini unutmayın. Örneğin 2 sayısını alın. Bazıları sol altta küçük bir daire ile yazabilir, bazıları ise yazmayabilir. Her biri 2'nin yazılabileceği şekilde bir varyasyonu temsil eden "2" için alt sınıfları belirlemek için kümelemeyi kullanabiliriz. Alt sınıflara dayalı birden çok model kullanmak, genel tanıma doğruluğunu iyileştirebilir.
+ 
+Küme Analizi
+
+🠶 Kümeleme, Web aramasında da birçok uygulama bulmuştur. Örneğin, bir anahtar kelime araması, çok fazla sayıda web sayfası nedeniyle genellikle çok sayıda isabet (yani, aramayla alakalı sayfalar) döndürebilir. Kümeleme, arama sonuçlarını gruplar halinde düzenlemek ve sonuçları kısa ve kolay erişilebilir bir şekilde sunmak için kullanılabilir. Ayrıca, belgeleri, bilgi erişim uygulamasında yaygın olarak kullanılan konulara göre kümelemek için kümeleme teknikleri geliştirilmiştir.
+ 
+Küme Analizi
+
+🠶 Bir veri madenciliği işlevi olarak küme analizi, verilerin dağılımı hakkında fikir edinmek, her bir kümenin özelliklerini gözlemlemek ve daha fazla analiz için belirli bir küme kümesine odaklanmak için bağımsız bir araç olarak kullanılabilir. Alternatif olarak, daha sonra tespit edilen kümeler ve seçilen nitelikler veya özellikler üzerinde çalışacak olan karakterizasyon, nitelik alt kümesi seçimi ve sınıflandırma gibi diğer algoritmalar için bir ön işleme adımı olarak hizmet edebilir.
+ 
+Küme Analizi
+
+🠶 Bir küme, küme içinde birbirine benzeyen ve diğer kümelerdeki nesnelere benzemeyen bir veri nesneleri topluluğu olduğu için, bir veri nesnesi kümesi, örtük bir sınıf olarak ele alınabilir. Bu anlamda, kümelemeye bazen otomatik sınıflandırma denir. Yine burada kritik bir fark, kümelemenin gruplamaları otomatik olarak bulabilmesidir. Bu, küme analizinin belirgin bir avantajıdır.
+ 
+Küme Analizi
+
+🠶 Kümeleme, büyük veri kümelerini benzerliklerine göre gruplara ayırdığı için bazı uygulamalarda kümeleme veri bölümleme olarak da adlandırılır. Kümeleme, aykırı değerlerin (herhangi bir kümeden "uzak" olan değerler) yaygın durumlardan daha ilginç olabileceği aykırı değer tespiti için de kullanılabilir. Aykırı değer tespiti uygulamaları, kredi kartı dolandırıcılığının tespiti ve elektronik ticarette suç faaliyetlerinin izlenmesini içerir.
+ 
+YAPAY SİNİR AĞLARI
+
+🠶 Yapay sinir ağlarının arka plan geçmişi 19. Yüzyılın sonları ve 20. Yüzyılın başlarına dayanmaktadır. Bu temel atma, başta Hermann von Helmholtz, Ersnt Mach ve Ivan Pavlov gibi bilim adamları tarafından fizik, psikoloji ve nörofizyoloji alanlarında disiplinler arası çalışmaları olmuştur. Fakat bu çalışmalarda öğrenme, görme, düzenleme gibi temel kuramlar ön plana çıkmamış ve nöronların yaptıkları işlemlerin matematiksel modelleri bulunmaktadır.
+ 
+YAPAY SİNİR AĞLARI
+
+🠶 Yapay sinir ağlarının günümüzdeki halinin temeli 1940’lı yıllarda Warren McCulloch ve Walter Pitts tarafından yapılan çalışmalar ile ortaya çıkmıştır. Bu çalışmalar yapay sinir ağlarının herhangi bir aritmetik ve mantıksal modele sahip olduklarını göstermiştir. Yaptıkları çalışma, yapay sinir ağlarının miladı olarak kabul edilmektedir. Warren McCulloch ve Walter Pitts’in yaptıkları çalışmada yapay sinir ağları 5 temel varsayım üzerine kurulmuştur.
+ 
+YAPAY SİNİR AĞLARI
+
+🠶 Warren McCulloch ve Walter Pitts’in yaptıkları çalışmada yapay sinir ağları 5 temel varsayım üzerine kurulmuştur.
+🠶 Sinir hücrelerinin hareketinde hep veya hiç ilkesi bulunmaktadır.
+🠶 Sıralı yer alan sinir hücrelerinde, sıradaki sinir hücresinin uyarılması için, 2 veya daha fazla sabit sayıdaki sinir hücresinin belirli bir zaman diliminde uyarılması gerekmektedir.
+🠶 Sinir sisteminde tek belirgin gecikme sinaptik gecikmedir.
+🠶 Sinapsın herhangi bir engelleyici hareketi, sinir hücre uyarılmasını engellemektedir.
+🠶 Sinir hücrelerinin bağlantıları, zamana göre değişmez.
+ 
+YAPAY SİNİR AĞLARI
+
+🠶 Yapay sinir ağları, birbirine bağlı nöronların karmaşık yapılarının, biyolojik öğrenme sistemlerinin gözlemlenmesi sonucunda öğrenilen bilgilerden esinlenerek ortaya çıkmıştır. En basit haliyle, yapay sinir ağları, yoğun bir şekilde birbirine bağlı basit birimler kümesinden oluşturulmaktadır. Burada her bir birim bir takım gerçek değerli girdileri (muhtemelen birimlerdeki çıktıları) alır ve tek bir gerçek değerli çıktı üretmemektedir(muhtemelen birçok başka birime giriş).
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 YSA’ nın hesaplama ve bilgi işleme gücünü, paralel dağılmış yapısından, öğrenebilme ve genelleme yeteneğinden aldığı söylenebilir. Genelleme, eğitim ya da öğrenme sürecinde karşılaşılmayan girişler için de YSA’ nın uygun tepkileri üretmesi olarak tanımlanır. Bu üstün özellikleri, YSA’ nın karmaşık problemleri çözebilme yeteneğini gösterir. Günümüzde birçok bilim alanında YSA, aşağıdaki özellikleri nedeniyle etkin olmuş ve uygulama yeri bulmuştur.
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Doğrusal Olmama : YSA’ nın temel işlem elemanı olan hücre doğrusal değildir. Dolayısıyla hücrelerin birleşmesinden meydana gelen YSA da doğrusal değildir ve bu özellik bütün ağa yayılmış durumdadır. Bu özelliği ile YSA, doğrusal olmayan karmaşık problemlerin çözümünde en önemli araç olmuştur.
+
+🠶
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Öğrenme : YSA’ nın arzu edilen davranışı gösterebilmesi için amaca uygun olarak ayarlanması gerekir. Bu, hücreler arasında doğru bağlantıların yapılması ve bağlantıların uygun ağırlıklara sahip olması gerektiğini ifade eder. YSA’ nın karmaşık yapısı nedeniyle bağlantılar ve ağırlıklar önceden ayarlı olarak verilemez yada tasarlanamaz. Bu nedenle YSA, istenen davranışı gösterecek şekilde ilgilendiği problemden aldığı eğitim örneklerini kullanarak problemi öğrenmelidir.
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Genelleme : YSA, ilgilendiği problemi öğrendikten sonra eğitim sırasında karşılaşmadığı test örnekleri için de arzu edilen tepkiyi üretebilir. Örneğin, karakter tanıma amacıyla eğitilmiş bir YSA, bozuk karakter girişlerinde de doğru karakterleri verebilir yada bir sistemin eğitilmiş YSA modeli, eğitim sürecinde verilmeyen giriş sinyalleri için de sistemle aynı davranışı gösterebilir.
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Uyarlanabilirlik : YSA, ilgilendiği problemdeki değişikliklere göre ağırlıklarını ayarlar. Yani, belirli bir problemi çözmek amacıyla eğitilen YSA, problemdeki değişimlere göre tekrar eğitilebilir, değişimler devamlı ise gerçek zamanda da eğitime devam edilebilir. Bu özelliği ile YSA, uyarlamalı örnek tanıma, sinyal işleme, sistem tanılama ve denetim gibi alanlarda etkin olarak kullanılır.
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Hata Toleransı : YSA, çok sayıda hücrenin çeşitli şekillerde bağlanmasından oluştuğundan paralel dağılmış bir yapıya sahiptir ve ağın sahip olduğu bilgi, ağdaki bütün bağlantılar üzerine dağılmış durumdadır. Bu nedenle, eğitilmiş bir YSA nın bazı bağlantılarının hatta bazı hücrelerinin etkisiz hale gelmesi, ağın doğru bilgi üretmesini önemli ölçüde etkilemez. Bu nedenle, geleneksel yöntemlere göre hatayı tolere etme yetenekleri son derece yüksektir.
+
+🠶
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Donanım ve Hız : YSA, paralel yapısı nedeniyle büyük ölçekli entegre devre (VLSI) teknolojisi ile gerçeklenebilir. Bu özellik, YSA nın hızlı bilgi işleme yeteneğini artırır ve gerçek zamanlı uygulamalarda arzu edilir.
+ 
+Yapay Sinir Ağlarının Özellikleri
+
+🠶 Analiz ve Tasarım Kolaylığı: YSA’ nın temel işlem elemanı olan hücrenin yapısı ve modeli, bölüm 1.3 de açıklandığı gibi bütün YSA yapılarında yaklaşık aynıdır. Dolayısıyla, YSA’ nın farklı uygulama alanlarındaki yapıları da standart yapıdaki bu hücrelerden oluşacaktır. Bu nedenle, farklı uygulama alanlarında kullanılan YSA’ ları benzer öğrenme algoritmalarını ve teorilerini paylaşabilirler. Bu özellik, problemlerin YSA ile çözümünde önemli bir kolaylık getirecektir.
+ 
+Yapay Sinir Ağlarının Avantajları
+
+🠶 Yapay Sinir Ağları bir çok hücreden meydana gelir ve bu hücreler eş zamanlı çalışarak karmaşık işleri gerçekleştirir.
+🠶 Öğrenme kabiliyeti vardır ve farklı öğrenme algoritmalarıyla öğrenebilirler.
+🠶 Görülmemiş çıktılar için sonuç (bilgi) üretebilirler. Gözetimsiz öğrenim söz konusudur.
+🠶 Örüntü	tanıma	ve	sınıflandırma	yapabilirler.	Eksik	örüntüleri
+tamamlayabilirler.
+🠶 Hata toleransına sahiptirler. Eksik veya belirsiz bilgiyle çalışabilirler. Hatalı durumlarda dereceli bozulma (graceful degradation) gösterirler.
+🠶 Paralel çalışabilmekte ve gerçek zamanlı bilgiyi işleyebilmektedirler.
+ 
+YSA’ nın Uygulama Alanları
+
+🠶 Hesaplamalı Finans(Computational finance): Kredi skorlaması(credit scoring), Algoritmik Ticaret(algorithmic trading)
+🠶 Görüntü işleme ve bilgisayarla görü(image processing and computer vision): Yüz tanıma(face recognition), hareket tanıma(motion detection), nesne tanıma(object detection)
+🠶	Hesaplamalı biyoloji(Computational biology): Tümör bulma(tumor detection), İlaç keşfi(durg discovery), DNA dizilimi(DNA seqencing)
+🠶	Enerji üretimi (Energy production): Fiyat ve yük tahmini (price and load
+forecasting)
+🠶	Otomotiv,	havacılık	ve	üretim	(Automotive,	aerospace	and manufacturing): Öngörücü bakım (predictive maintenance)
+🠶	Doğal dil işleme(Natural language processing ): Sesli Asistan(voice assistant),
+Duygu analizi(emotion analysis)
+ 
+Bir yapay sinir hücresi beş bölümden oluşmaktadır.
+🠶	1.Girdiler: Girdiler nöronlara gelen verilerdir. Bu girdilerden gelen veriler biyolojik sinir hücrelerinde olduğu gibi toplanmak üzere nöron çekirdeğine gönderilir.
+🠶	2. Ağırlıklar: Yapay sinir hücresine gelen bilgiler girdiler üzerinden çekirdeğe ulaşmadan önce geldikleri bağlantıların ağırlığıyla çarpılarak çekirdeğe iletilir. Bu sayede girdilerin üretilecek çıktı üzerindeki etkisi ayarlanabilinmektedir.
+🠶	3.Toplama Fonksiyonu (Birleştirme Fonksiyonu): Toplama fonksiyonu bir yapay sinir hücresine ağırlıklarla çarpılarak gelen girdileri toplayarak o hücrenin net girdisini hesaplayan bir fonksiyondur
+🠶	4.Aktivasyon fonksiyonu: Önceki katmandaki tüm girdilerin ağırlıklı toplamını alan ve daha sonra bir çıkış değeri (tipik olarak doğrusal olmayan) üreten ve bir sonraki katmana geçiren bir fonksiyondur. (örneğin, ReLU veya sigmoid )
+🠶	5.Çıktılar: Aktivasyon fonksiyonundan çıkan değer hücrenin çıktı değeri
+olmaktadır. Her hücrenin birden fazla girdisi olmasına rağmen bir tek çıktısı olmaktadır. Bu çıktı istenilen sayıda hücreye bağlanabilir.
+ 
+Çok katmanlı nöronlar
+
+🠶 3 katmana sahip yapay sinir ağı şekilde gösterilmiştir. Her katmanın kendine ait ağırlık matrisi w, kendi bias vektörü b, net giriş vektörü n ve bir adet çıktı vektörü a değeri vardır. Bu katmanları birbirinden ayırmak için ek olarak birinci katman 𝑤1 ağırlık matrisine ikinci katman ise 𝑤2 ağırlık matrisine sahiptir. Ayrıca r adet giriş değeri vardır ve 𝑆1 birinci katmandaki değerleri ve 𝑆2’de ikinci katmandaki değerleri göstermektedir.
+ 
+
+ 
+YSA’nın konuları
+
+🠶 Veri sıkıştırma
+🠶 Örüntü tanıma
+🠶 Doğrusal olmayan sinyal işleme
+🠶 Doğrusal olmayan sistem modelleme
+🠶 Optimizasyon
+🠶 Zeki ve doğrusal olmayan kontrol
+ 
+Uygulamalar
+
+🠶 Veri madenciliği
+🠶 Optik karakter tanıma
+🠶 Ürünün Pazar performansı tahmini
+🠶 Kredi kartları hileleri
+🠶 Robotlarda ve zeki araçlarda optimum yörünge belirleme
+🠶 Konuşma, parmak izi ve iris tanıma
+ 
+Uygulamalar
+
+🠶 Kalite kontrol
+🠶  İletişimde geçersiz eko filtreleme
+🠶 Haberleşmede trafik yoğunluğunun kontrol etme ve anahtarlama
+🠶 Radar ve sonar sinyal sınıflandırma
+🠶 Hastalık teşhisi (MR, ultrason )
+🠶 Beyin modellenmesi
