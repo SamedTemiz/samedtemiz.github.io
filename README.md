@@ -1,1 +1,0 @@
-# samedtemiz.github.io
